@@ -1,10 +1,10 @@
 ---
-import { LOGO_IMAGE, SITE } from "@config";
+import { SITE } from "@config";
 import Hr from "./Hr.astro";
 import LinkButton from "./LinkButton.astro";
 
 export interface Props {
-  activeNav?: "posts" | "tags" | "projects"  | "services" | "about" | "search";
+  activeNav?: "posts" | "tags" | "projects" | "services" | "about" | "search";
 }
 
 const { activeNav } = Astro.props;
@@ -15,18 +15,7 @@ const { activeNav } = Astro.props;
   <div class="nav-container">
     <div class="top-nav-wrap">
       <a href="/" class="logo whitespace-nowrap">
-        {
-          LOGO_IMAGE.enable ? (
-            <img
-              src={`/assets/${LOGO_IMAGE.svg ? "logo.svg" : "logo.png"}`}
-              alt={SITE.title}
-              width={LOGO_IMAGE.width}
-              height={LOGO_IMAGE.height}
-            />
-          ) : (
-            SITE.title
-          )
-        }
+        {SITE.title}
       </a>
       <nav id="nav-menu">
         <button
@@ -66,12 +55,18 @@ const { activeNav } = Astro.props;
             </a>
           </li>
           <li>
-            <a href="/projects/" class={activeNav === "projects" ? "active" : ""}>
+            <a
+              href="/projects/"
+              class={activeNav === "projects" ? "active" : ""}
+            >
               Projects
             </a>
           </li>
           <li>
-            <a href="/services/" class={activeNav === "services" ? "active" : ""}>
+            <a
+              href="/services/"
+              class={activeNav === "services" ? "active" : ""}
+            >
               Services
             </a>
           </li>
