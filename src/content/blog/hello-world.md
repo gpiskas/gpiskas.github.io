@@ -19,5 +19,5 @@ Creating my homepage and plans for projects and services
 aaaaaaa
 ## Services
 aaaaaaa
-## Notes
+## Posts
 aaaaaaa
