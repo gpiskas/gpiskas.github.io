@@ -5,7 +5,6 @@ export const SITE: Site = {
   author: "Georgios Piskas",
   desc: "Projects, Services & Posts by Georgios Piskas",
   title: "Georgios Piskas",
-  ogImage: "gpiskas-og.jpg",
   lightAndDarkMode: true,
   postPerPage: 5,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
