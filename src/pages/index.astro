@@ -6,7 +6,6 @@ import Footer from "@components/Footer.astro";
 import LinkButton from "@components/LinkButton.astro";
 import Hr from "@components/Hr.astro";
 import Card from "@components/Card";
-import Socials from "@components/Socials.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import { SOCIALS } from "@config";
 
@@ -23,38 +22,30 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   <Header />
   <main id="main-content">
     <section id="hero">
-      <p>
-        How to use Git Hooks to use Git Hooks to use Git Hooks to set your Created and Modified Dates on AstroPaper.
-        How to uuse Git Hooks to se Git Hooks to suse Git Hooks to use Git Hooks to et your Created and Modified Dates on AstroPaper.
+      <p class="highlight">Dreamer. Planner. Doer.</p>
+      <p class="highlight">
+        Solution provider. Architecure builder. Team leader. Tech lover.
       </p>
-      <p>
-        How to use Git Hooks to use Git Hooks to use Git Hooks to set your Created and Modified Dates on AstroPaper.
-        How to uuse Git Hooks to se Git Hooks to suse Git Hooks to use Git Hooks to et your Created and Modified Dates on AstroPaper.
+      <p class="highlight">
+        Problem solver. Software composer. Bug crusher. Code cleaner.
       </p>
+      <p>Big thinker. Head scratcher. Fire starter. Goal achiever.</p>
+      <p>Quick learner. Idea conceiver. People convincer. Trend appraiser.</p>
+      <p>Meaning finder. Sanity checker. Buzzword hater. Bullshit avoider.</p>
       <p>
+        Nature enjoyer. World traveller. Game player. Gym goer. Home fixer. Cat
+        petter. Bike rider. Book reader. Movie watcher. Guitar player. Bread
+        baker. Bean counter. Tax payer. Joke dispenser.
+      </p>
+      <p>Air breather. Water drinker. Food eater. Deep sleeper.</p>
+      <p class="highlight">
         <LinkButton
           className="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
-          href="https://github.com/satnaing/astro-paper#readme"
+          href="/about/"
         >
-          README
+          Read more in About
         </LinkButton>
       </p>
-      <p>
-        <LinkButton
-          className="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
-          href="https://github.com/satnaing/astro-paper#readme"
-        >
-          README
-        </LinkButton>
-      </p>
-      {
-        // only display if at least one social link is enabled
-        socialCount > 0 && (
-          <div class="social-wrapper">
-            <Socials />
-          </div>
-        )
-      }
     </section>
 
     <Hr />
@@ -123,7 +114,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     @apply my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl;
   }
   #hero p {
-    @apply my-2;
+    @apply my-2 p-1;
   }
   .social-wrapper {
     @apply mt-4 flex flex-col sm:flex-row sm:items-center;

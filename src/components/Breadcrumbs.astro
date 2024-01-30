@@ -35,7 +35,7 @@ breadcrumbList[0] === "tags" &&
         index + 1 === breadcrumbList.length ? (
           <li>
             <span
-              class={`${index > 0 ? "lowercase" : "capitalize"}`}
+              class={`${(index > 0 && breadcrumbList[0] === "tags") ? "lowercase" : "capitalize"}`}
               aria-current="page"
             >
               {/* make the last part lowercase in Home > Tags > some-tag */}

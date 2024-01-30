@@ -133,3 +133,7 @@
     @apply outline-2 outline-offset-1 outline-skin-fill focus-visible:no-underline focus-visible:outline-dashed;
   }
 }
+
+.highlight {
+  @apply bg-skin-card;
+}
