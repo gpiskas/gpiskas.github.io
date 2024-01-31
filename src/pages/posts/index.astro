@@ -5,7 +5,6 @@ import getSortedPosts from "@utils/getSortedPosts";
 import getPagination from "@utils/getPagination";
 
 const posts = await getCollection("blog");
-
 const sortedPosts = getSortedPosts(posts);
 
 const pagination = getPagination({

@@ -1,5 +1,4 @@
 ---
-import type { CollectionEntry } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import Main from "@layouts/Main.astro";
 import Header from "@components/Header.astro";
@@ -11,7 +10,7 @@ import { SITE } from "@config";
 export interface Props {
   currentPage: number;
   totalPages: number;
-  paginatedPosts: CollectionEntry<"blog">[];
+  paginatedPosts: BlogPost[];
 }
 
 const { currentPage, totalPages, paginatedPosts } = Astro.props;

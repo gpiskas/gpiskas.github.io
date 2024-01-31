@@ -14,7 +14,6 @@ const { tag, size = "sm" } = Astro.props;
 >
   <a
     href={`/tags/${tag}/`}
-    transition:name={tag}
     class={`${size === "sm" ? "text-sm" : "text-lg"} pr-2 group`}
   >
     <svg

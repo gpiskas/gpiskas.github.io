@@ -1,13 +1,13 @@
 ---
-import { type CollectionEntry, getCollection } from "astro:content";
+import { getCollection } from "astro:content";
 import Posts from "@layouts/Posts.astro";
-import PostDetails from "@layouts/PostDetails.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import getPageNumbers from "@utils/getPageNumbers";
 import getPagination from "@utils/getPagination";
+import SinglePost from "@layouts/SinglePost.astro";
 
 export interface Props {
-  post: CollectionEntry<"blog">;
+  post: BlogPost;
 }
 
 export async function getStaticPaths() {
@@ -38,4 +38,4 @@ const pagination = getPagination({
 });
 ---
 
-{post ? <PostDetails post={post} /> : <Posts {...pagination} />}
+{post ? <SinglePost {post} /> : <Posts {...pagination} />}

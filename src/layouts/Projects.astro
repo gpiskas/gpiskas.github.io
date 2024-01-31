@@ -1,28 +1,28 @@
 ---
-import { SITE } from "@config";
-import Breadcrumbs from "@components/Breadcrumbs.astro";
-import Footer from "@components/Footer.astro";
+import Layout from "@layouts/Layout.astro";
+import Main from "@layouts/Main.astro";
 import Header from "@components/Header.astro";
-import Layout from "./Layout.astro";
+import Footer from "@components/Footer.astro";
+import Card from "@components/Card";
+import { SITE } from "@config";
 
 export interface Props {
-  frontmatter: {
-    title: string;
-    description?: string;
-  };
+  posts: ProjectPost[];
 }
 
-const { frontmatter } = Astro.props;
+const { posts } = Astro.props;
 ---
 
-<Layout title={`${SITE.title} | ${frontmatter.title}`}>
+<Layout title={`${SITE.title} | Projects`}>
   <Header activeNav="projects" />
-  <Breadcrumbs />
-  <main id="main-content">
-    <section id="projects" class="prose mb-28 max-w-5xl prose-img:border-0">
-      <h1 class="text-2xl tracking-wider sm:text-3xl">{frontmatter.title}</h1>
-      <slot />
-    </section>
-  </main>
+  <Main pageTitle="Projects" pageDesc="Projects and software I have worked on.">
+    <ul>
+      {
+        posts.map(({ data, slug }) => (
+          <Card href={`/projects/${slug}/`} frontmatter={data} />
+        ))
+      }
+    </ul>
+  </Main>
   <Footer />
 </Layout>
