@@ -1,3 +1,4 @@
+import type { BlogPost } from "env";
 import Datetime from "./Datetime";
 
 export interface Props {
