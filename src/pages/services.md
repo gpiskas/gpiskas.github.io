@@ -6,6 +6,7 @@ title: "Services"
 Please reach out with a description of your needs and an estimate in days and/or budget.
 
 ## Consulting:
+
 - Systems Architecture
 - Software Engineering
 - Cloud-based Solutions & Adoption
@@ -16,8 +17,8 @@ Please reach out with a description of your needs and an estimate in days and/or
 - Software Lifecycle Management
 - Process Automation & Optimization
 
-
 ## Projects:
+
 - Fullstack Webapps
 - Static & Dynamic Websites
 - Cloud-based Solutions
