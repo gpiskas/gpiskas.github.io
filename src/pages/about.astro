@@ -1,0 +1,50 @@
+---
+import Footer from "@components/Footer.astro";
+import Header from "@components/Header.astro";
+import Hr from "@components/Hr.astro";
+import { SITE } from "@config";
+import Layout from "@layouts/Layout.astro";
+---
+
+<Layout title={`${SITE.title} | About`}>
+  <Header activeNav="about" />
+  <main id="main-content">
+    <section id="hero">
+      <p class="highlight">Dreamer. Planner. Doer.</p>
+      <p class="highlight">
+        Solution provider. Architecure builder. Team leader. Tech lover.
+      </p>
+      <p class="highlight">
+        Problem solver. Software composer. Bug crusher. Code cleaner.
+      </p>
+      <p>Big thinker. Head scratcher. Fire starter. Goal achiever.</p>
+      <p>Quick learner. Idea conceiver. People convincer. Trend appraiser.</p>
+      <p>Meaning finder. Sanity checker. Buzzword hater. Bullshit avoider.</p>
+      <p>
+        Nature enjoyer. World traveller. Game player. Gym goer. Home fixer. Cat
+        petter. Bike rider. Book reader. Movie watcher. Guitar player. Bread
+        baker. Bean counter. Tax payer. Joke dispenser.
+      </p>
+      <p>Air breather. Water drinker. Food eater. Deep sleeper.</p>
+    </section>
+    <Hr />
+    <section id="hero">
+      <p>XXXXXXXXXXXX</p>
+      <p>XXXXXXXXXXXX</p>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  /* ===== Hero Section ===== */
+  #hero {
+    @apply pb-6 pt-8;
+  }
+  #hero h1 {
+    @apply my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl;
+  }
+  #hero p {
+    @apply my-2 p-1;
+  }
+</style>

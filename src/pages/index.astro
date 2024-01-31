@@ -18,35 +18,6 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 <Layout>
   <Header />
   <main id="main-content">
-    <section id="hero">
-      <p class="highlight">Dreamer. Planner. Doer.</p>
-      <p class="highlight">
-        Solution provider. Architecure builder. Team leader. Tech lover.
-      </p>
-      <p class="highlight">
-        Problem solver. Software composer. Bug crusher. Code cleaner.
-      </p>
-      <p>Big thinker. Head scratcher. Fire starter. Goal achiever.</p>
-      <p>Quick learner. Idea conceiver. People convincer. Trend appraiser.</p>
-      <p>Meaning finder. Sanity checker. Buzzword hater. Bullshit avoider.</p>
-      <p>
-        Nature enjoyer. World traveller. Game player. Gym goer. Home fixer. Cat
-        petter. Bike rider. Book reader. Movie watcher. Guitar player. Bread
-        baker. Bean counter. Tax payer. Joke dispenser.
-      </p>
-      <p>Air breather. Water drinker. Food eater. Deep sleeper.</p>
-      <p class="highlight">
-        <LinkButton
-          className="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
-          href="/about/"
-        >
-          Read more in About
-        </LinkButton>
-      </p>
-    </section>
-
-    <Hr />
-
     {
       featuredPosts.length > 0 && (
         <>
@@ -103,23 +74,6 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 </Layout>
 
 <style>
-  /* ===== Hero Section ===== */
-  #hero {
-    @apply pb-6 pt-8;
-  }
-  #hero h1 {
-    @apply my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl;
-  }
-  #hero p {
-    @apply my-2 p-1;
-  }
-  .social-wrapper {
-    @apply mt-4 flex flex-col sm:flex-row sm:items-center;
-  }
-  .social-links {
-    @apply mb-1 mr-2 whitespace-nowrap sm:mb-0;
-  }
-
   /* ===== Featured & Recent Posts Sections ===== */
   #featured,
   #recent-posts {
