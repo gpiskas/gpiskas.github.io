@@ -1,44 +1,60 @@
 ---
 import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
-import Hr from "@components/Hr.astro";
 import { SITE } from "@config";
 import Layout from "@layouts/Layout.astro";
 import Main from "@layouts/Main.astro";
 ---
 
 <Layout title={`${SITE.title} | About`}>
-    <Header activeNav="about" />
-    <Main
-      pageTitle="About"
-    >
-      <section id="about" class="prose mx-auto mt-8 max-w-5xl">
-        <p class="highlight">Dreamer. Planner. Doer.</p>
-        <p class="highlight">
+  <Header activeNav="about" />
+  <Main pageTitle="About">
+    <section id="about" class="prose mx-auto mt-8 max-w-5xl">
+      <h3>I am a...</h3>
+      <p>
+        <span class="highlight">
           Solution provider. Architecure builder. Team leader. Tech lover.
-        </p>
-        <p class="highlight">
+        </span>
+      </p>
+      <p>
+        <span class="highlight">
           Problem solver. Software composer. Bug crusher. Code cleaner.
-        </p>
-        <p>Big thinker. Head scratcher. Fire starter. Goal achiever.</p>
-        <p>Quick learner. Idea conceiver. People convincer. Trend appraiser.</p>
-        <p>Meaning finder. Sanity checker. Buzzword hater. Bullshit avoider.</p>
-        <p>
-          Nature enjoyer. World traveller. Game player. Gym goer. Home fixer. Cat
-          petter. Bike rider. Book reader. Movie watcher. Guitar player. Bread
-          baker. Bean counter. Tax payer. Joke dispenser.
-        </p>
-        <p>Air breather. Water drinker. Food eater. Deep sleeper.</p>
-        <Hr />
-        <p>XXXXXXXXXXXX</p>
-        <p>XXXXXXXXXXXX</p>
-      </section>
-    </Main>
-    <Footer />
-  </Layout>
+        </span>
+      </p>
+      <p>Big thinker. Head scratcher. Fire starter. Goal achiever.</p>
+      <p>Quick learner. Idea conceiver. People convincer. Trend appraiser.</p>
+      <p>Meaning finder. Sanity checker. Buzzword hater. Bullshit avoider.</p>
+      <p>
+        Nature enjoyer. World traveller. Game player. Gym goer. Home fixer. Cat
+        petter. Bike rider. Book reader. Movie watcher. Guitar player. Bread
+        baker. Bean counter. Tax payer. Joke dispenser.
+      </p>
+      <p>Air breather. Water drinker. Food eater. Deep sleeper.</p>
+      <p class="last">
+        <span class="highlight">Dreamer. Planner. Doer.</span>
+      </p>
+      <h3>Experience</h3>
+      <p>XXXXXXXXXXXX</p>
+      <p>XXXXXXXXXXXX</p>
+      <h3>Education</h3>
+      <p>XXXXXXXXXXXX</p>
+      <p>XXXXXXXXXXXX</p>
+      <h3>Skills</h3>
+      <p>XXXXXXXXXXXX</p>
+      <p>XXXXXXXXXXXX</p>
+      <h3>Languages</h3>
+      <p>XXXXXXXXXXXX</p>
+      <p>XXXXXXXXXXXX</p>
+    </section>
+  </Main>
+  <Footer />
+</Layout>
 
-  <style>
-    #about p {
-        @apply m-2
-    }
-  </style>
+<style>
+  #about p {
+    @apply m-2;
+  }
+  .last {
+    @apply text-right text-2xl;
+  }
+</style>

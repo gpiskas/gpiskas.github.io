@@ -16,7 +16,7 @@ const { posts } = Astro.props;
 
 <Layout title={`${SITE.title} | Projects`}>
   <Header activeNav="projects" />
-  <Main pageTitle="Projects" pageDesc="Projects and software I have worked on.">
+  <Main pageTitle="Projects">
     <ul>
       {
         posts.map(({ data, slug }) => (

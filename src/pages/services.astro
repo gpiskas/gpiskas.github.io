@@ -8,12 +8,11 @@ import Main from "@layouts/Main.astro";
 
 <Layout title={`${SITE.title} | Services`}>
   <Header activeNav="services" />
-  <Main
-    pageTitle="Services"
-    pageDesc="Please reach out with a description of your needs and an estimate in days and/or budget."
-  >
+  <Main pageTitle="Services">
     <section id="services" class="prose mx-auto mt-8 max-w-5xl">
-      <h2 id="consulting">Consulting:</h2>
+      <p>Please reach out with a description of your needs and an estimate in days and/or budget.</p>
+      
+      <h3 id="consulting">Consulting:</h3>
       <ul>
         <li>Systems Architecture</li>
         <li>Software Engineering</li>
@@ -24,14 +23,16 @@ import Main from "@layouts/Main.astro";
         <li>Identity &amp; Access Management</li>
         <li>Software Lifecycle Management</li>
         <li>Process Automation &amp; Optimization</li>
+        <li>And more...</li>
       </ul>
-      <h2 id="projects">Projects:</h2>
+      <h3 id="projects">Projects:</h3>
       <ul>
         <li>Fullstack Webapps</li>
         <li>Static &amp; Dynamic Websites</li>
         <li>Cloud-based Solutions</li>
         <li>Mobile Apps</li>
         <li>Desktop Apps</li>
+        <li>And more...</li>
       </ul>
     </section>
   </Main>
