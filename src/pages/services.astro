@@ -1,0 +1,39 @@
+---
+import { SITE } from "@config";
+import Footer from "@components/Footer.astro";
+import Header from "@components/Header.astro";
+import Layout from "@layouts/Layout.astro";
+import Main from "@layouts/Main.astro";
+---
+
+<Layout title={`${SITE.title} | Services`}>
+  <Header activeNav="services" />
+  <Main
+    pageTitle="Services"
+    pageDesc="Please reach out with a description of your needs and an estimate in days and/or budget."
+  >
+    <section id="services" class="prose mx-auto mt-8 max-w-5xl">
+      <h2 id="consulting">Consulting:</h2>
+      <ul>
+        <li>Systems Architecture</li>
+        <li>Software Engineering</li>
+        <li>Cloud-based Solutions &amp; Adoption</li>
+        <li>Legacy Systems Modernization &amp; Refactoring</li>
+        <li>DevOps Practices</li>
+        <li>Infrastructure As Code</li>
+        <li>Identity &amp; Access Management</li>
+        <li>Software Lifecycle Management</li>
+        <li>Process Automation &amp; Optimization</li>
+      </ul>
+      <h2 id="projects">Projects:</h2>
+      <ul>
+        <li>Fullstack Webapps</li>
+        <li>Static &amp; Dynamic Websites</li>
+        <li>Cloud-based Solutions</li>
+        <li>Mobile Apps</li>
+        <li>Desktop Apps</li>
+      </ul>
+    </section>
+  </Main>
+  <Footer />
+</Layout>
