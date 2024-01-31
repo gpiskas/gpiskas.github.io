@@ -1,3 +1,4 @@
+import type { Post } from "env";
 import postFilter from "./postFilter";
 
 const getSortedPosts = (posts: Post[]) => {

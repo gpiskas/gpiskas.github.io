@@ -1,4 +1,5 @@
 import { SITE } from "@config";
+import type { Post } from "env";
 
 export default (post: Post) => {
   return (

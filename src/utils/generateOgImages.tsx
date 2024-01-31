@@ -2,6 +2,7 @@ import satori, { type SatoriOptions } from "satori";
 import { Resvg } from "@resvg/resvg-js";
 import postOgImage from "./og-templates/post";
 import siteOgImage from "./og-templates/site";
+import type { Post } from "env";
 
 const fetchFonts = async () => {
   // Regular Font
