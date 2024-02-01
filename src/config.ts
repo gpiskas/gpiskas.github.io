@@ -17,9 +17,27 @@ export const LOCALE = {
 
 export const SOCIALS: SocialObjects = [
   {
-    name: "Github",
-    href: "https://github.com/gpiskas",
-    linkTitle: `${SITE.author} on Github`,
+    name: "Stripe",
+    href: "https://buy.stripe.com/28obMAdue2or07udQR",
+    linkTitle: `Support ${SITE.author} via Stripe (Recurring)`,
+    active: true,
+  },
+  {
+    name: "Coin",
+    href: "https://donate.stripe.com/9AQcQE61M6EHcUg9AA",
+    linkTitle: `Support ${SITE.author} via Stripe (One-time)`,
+    active: true,
+  },
+  {
+    name: "PayPal",
+    href: "https://paypal.me/gpiskas",
+    linkTitle: `Support ${SITE.author} via PayPal`,
+    active: true,
+  },
+  {
+    name: "Coffee",
+    href: "https://ko-fi.com/gpiskas",
+    linkTitle: `Support ${SITE.author} via Ko-Fi`,
     active: true,
   },
   {
@@ -33,11 +51,5 @@ export const SOCIALS: SocialObjects = [
     href: "mailto:gpiskas@gmail.com",
     linkTitle: `Send an email to ${SITE.author}`,
     active: true,
-  },
-  {
-    name: "Rss",
-    href: "/rss.xml",
-    linkTitle: `RSS Feed`,
-    active: true,
-  },
+  }
 ];

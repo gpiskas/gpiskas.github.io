@@ -4,12 +4,17 @@ import Header from "@components/Header.astro";
 import { SITE } from "@config";
 import Layout from "@layouts/Layout.astro";
 import Main from "@layouts/Main.astro";
+import { Image } from "astro:assets";
+import portrait from "@assets/images/gpiskas.png";
+import LinkButton from "@components/LinkButton.astro";
+import Hr from "@components/Hr.astro";
 ---
 
 <Layout title={`${SITE.title} | About`}>
   <Header activeNav="about" />
   <Main pageTitle="About">
     <section id="about" class="prose mx-auto mt-8 max-w-5xl">
+      <Image class="portrait" src={portrait} alt="Georgios Piskas" />
       <h3>I am a...</h3>
       <p>
         <span class="highlight">
@@ -33,28 +38,39 @@ import Main from "@layouts/Main.astro";
       <p class="last">
         <span class="highlight">Dreamer. Planner. Doer.</span>
       </p>
-      <h3>Experience</h3>
-      <p>XXXXXXXXXXXX</p>
-      <p>XXXXXXXXXXXX</p>
-      <h3>Education</h3>
-      <p>XXXXXXXXXXXX</p>
-      <p>XXXXXXXXXXXX</p>
-      <h3>Skills</h3>
-      <p>XXXXXXXXXXXX</p>
-      <p>XXXXXXXXXXXX</p>
-      <h3>Languages</h3>
-      <p>XXXXXXXXXXXX</p>
-      <p>XXXXXXXXXXXX</p>
+      <Hr />
+      <p>
+        Visit my <LinkButton
+          href="https://www.linkedin.com/in/gpiskas"
+          title="Georgios Piskas on LinkedIn"
+          ariaLabel="Georgios Piskas on LinkedIn"
+          newTab
+        >
+          LinkedIn Profile
+        </LinkButton> for more details.
+      </p>
+      <p>
+        Reach out at <LinkButton
+          href="mailto:gpiskas@gmail.com"
+          title="Send an email to Georgios Piskas"
+          ariaLabel="Send an email to Georgios Piskas"
+        >
+          gpiskas@gmail.com
+        </LinkButton> for business inquiries.
+      </p>
     </section>
   </Main>
   <Footer />
-</Layout>
 
-<style>
-  #about p {
-    @apply m-2;
-  }
-  .last {
-    @apply text-right text-2xl;
-  }
-</style>
+  <style>
+    #about p {
+      @apply m-2;
+    }
+    .last {
+      @apply text-right text-xl;
+    }
+    .portrait {
+      @apply float-none h-40 w-40 rounded-full object-cover sm:float-right;
+    }
+  </style>
+</Layout>

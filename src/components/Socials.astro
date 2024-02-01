@@ -13,6 +13,7 @@ import socialIcons from "@assets/socialIcons";
         className="link-button"
         title={social.linkTitle}
         ariaLabel={social.linkTitle}
+        newTab={true}
       >
         <Fragment set:html={socialIcons[social.name]} />
         <span class="sr-only">{social.linkTitle}</span>
@@ -23,7 +24,7 @@ import socialIcons from "@assets/socialIcons";
 
 <style>
   .social-icons {
-    @apply flex-wrap justify-center gap-2;
+    @apply flex-wrap justify-center gap-1;
   }
   .link-button {
     @apply py-2 px-1 hover:rotate-6 sm:p-1;

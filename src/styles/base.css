@@ -135,5 +135,5 @@
 }
 
 .highlight {
-  @apply bg-skin-card inline-block;
+  @apply bg-skin-card;
 }
