@@ -129,13 +129,13 @@ const { activeNav } = Astro.props;
     @apply mx-auto flex max-w-5xl flex-col items-center justify-between sm:flex-row;
   }
   .top-nav-wrap {
-    @apply relative flex w-full items-start justify-between p-4 sm:items-center sm:py-8;
+    @apply relative flex w-full items-start justify-between p-4 sm:items-center;
   }
   .logo {
-    @apply absolute py-1 text-xl font-semibold sm:static sm:text-2xl;
+    @apply text-2xl font-semibold;
   }
   .hamburger-menu {
-    @apply self-end p-2 sm:hidden;
+    @apply self-end sm:hidden;
   }
   .hamburger-menu svg {
     @apply h-6 w-6 scale-125 fill-skin-base;
@@ -168,7 +168,7 @@ const { activeNav } = Astro.props;
   }
 
   nav button {
-    @apply p-1;
+    @apply p-1 leading-4;
   }
   nav button svg {
     @apply h-6 w-6 fill-skin-base hover:fill-skin-accent;

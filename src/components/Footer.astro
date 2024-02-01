@@ -15,29 +15,11 @@ const { noMarginTop = false } = Astro.props;
 <footer class={`${noMarginTop ? "" : "mt-auto"}`}>
   <Hr noPadding />
   <div class="footer-wrapper">
-    <Socials centered />
+    <Socials />
     <div class="copyright-wrapper">
       <span>{SITE.author} &#169; {currentYear}</span>
       <span class="separator">&nbsp;|&nbsp;</span>
       <span class="highlight">The code you don't write has no bugs.</span>
-      <span class="separator">&nbsp;|&nbsp;</span>
-      <a
-        target="_blank"
-        href="/rss.xml"
-        class="rss-link"
-        aria-label="rss feed"
-        title="RSS Feed"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg"
-          ><path
-            d="M19 20.001C19 11.729 12.271 5 4 5v2c7.168 0 13 5.832 13 13.001h2z"
-          ></path><path
-            d="M12 20.001h2C14 14.486 9.514 10 4 10v2c4.411 0 8 3.589 8 8.001z"
-          ></path><circle cx="6" cy="18" r="2"></circle>
-        </svg>
-        <span class="sr-only">RSS Feed</span>
-      </a>
-      <!--<span>Terms</span> -->
     </div>
   </div>
 </footer>
@@ -47,7 +29,7 @@ const { noMarginTop = false } = Astro.props;
     @apply w-full;
   }
   .footer-wrapper {
-    @apply flex flex-col items-center justify-between py-6 sm:flex-row-reverse sm:py-4;
+    @apply flex flex-col items-center justify-between sm:flex-row-reverse;
   }
   .link-button {
     @apply my-1 p-2 hover:rotate-6;
@@ -56,7 +38,7 @@ const { noMarginTop = false } = Astro.props;
     @apply scale-125;
   }
   .copyright-wrapper {
-    @apply my-2 flex flex-col items-center whitespace-nowrap sm:flex-row;
+    @apply m-2 flex flex-col items-center whitespace-nowrap sm:flex-row;
   }
   .separator {
     @apply hidden sm:inline;

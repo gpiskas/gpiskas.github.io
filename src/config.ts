@@ -6,7 +6,7 @@ export const SITE: Site = {
   desc: "Projects, Services & Posts by Georgios Piskas",
   title: "Georgios Piskas",
   lightAndDarkMode: true,
-  postPerPage: 5,
+  postPerPage: 6,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
 };
 
@@ -32,6 +32,12 @@ export const SOCIALS: SocialObjects = [
     name: "Mail",
     href: "mailto:gpiskas@gmail.com",
     linkTitle: `Send an email to ${SITE.author}`,
+    active: true,
+  },
+  {
+    name: "Rss",
+    href: "/rss.xml",
+    linkTitle: `RSS Feed`,
     active: true,
   },
 ];
