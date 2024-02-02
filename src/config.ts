@@ -6,7 +6,7 @@ export const SITE: Site = {
   desc: "Projects, Services & Posts by Georgios Piskas",
   title: "Georgios Piskas",
   lightAndDarkMode: true,
-  ogImage: 'og.png',
+  ogImage: "og.png",
   postPerPage: 6,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
 };
@@ -58,5 +58,5 @@ export const SOCIALS: SocialObjects = [
     href: "mailto:gpiskas@gmail.com",
     linkTitle: "Send an email to Georgios Piskas",
     active: true,
-  }
+  },
 ];

@@ -21,9 +21,7 @@ const { currentPage, totalPages, paginatedPosts, tag, tagName } = Astro.props;
 
 <Layout title={`${SITE.title} | Tag: ${tagName}`}>
   <Header activeNav="tags" />
-  <Main
-    pageTitle={`Tag: ${tagName}`}
-  >
+  <Main pageTitle={`Tag: ${tagName}`}>
     <h1 slot="title">{`Tag:${tag}`}</h1>
     <ul>
       {

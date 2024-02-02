@@ -3,10 +3,10 @@ import { getCollection } from "astro:content";
 import SingleProject from "@layouts/SingleProject.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import Projects from "@layouts/Projects.astro";
-import type { BlogPost } from "types";
+import type { ProjectPost } from "types";
 
 export interface Props {
-  post: BlogPost;
+  post: ProjectPost;
 }
 
 export async function getStaticPaths() {

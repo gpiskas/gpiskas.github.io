@@ -20,7 +20,6 @@ export type SocialObjects = {
   ariaLabel?: string;
 }[];
 
-
 export type BlogPost = CollectionEntry<"blog">;
 export type ProjectPost = CollectionEntry<"projects">;
 export type Post = BlogPost | ProjectPost;
