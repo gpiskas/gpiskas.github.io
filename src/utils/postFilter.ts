@@ -1,5 +1,5 @@
 import { SITE } from "@config";
-import type { Post } from "env";
+import type { Post } from "types";
 
 const postFilter = ({ data }: Post) => {
   const isPublishTimePassed =

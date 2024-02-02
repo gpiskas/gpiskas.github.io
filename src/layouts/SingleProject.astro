@@ -6,7 +6,7 @@ import Tag from "@components/Tag.astro";
 import Datetime from "@components/Datetime";
 import { slugifyStr } from "@utils/slugify";
 import { SITE } from "@config";
-import type { ProjectPost } from "env";
+import type { ProjectPost } from "types";
 
 export interface Props {
   post: ProjectPost;
@@ -46,7 +46,7 @@ const layoutProps = {
 ---
 
 <Layout {...layoutProps}>
-  <Header />
+  <Header activeNav="projects" />
   <div class="mx-auto flex w-full max-w-5xl justify-start px-2">
     <button
       class="focus-outline mb-2 mt-8 flex hover:opacity-75"
@@ -67,7 +67,7 @@ const layoutProps = {
       size="lg"
       className="my-2"
     />
-    <article id="article" role="article" class="prose mx-auto mt-8 max-w-5xl">
+    <article id="article" role="article" class="prose max-w-full">
       <Content />
     </article>
 

@@ -1,8 +1,7 @@
 import satori, { type SatoriOptions } from "satori";
 import { Resvg } from "@resvg/resvg-js";
 import postOgImage from "./og-templates/post";
-import siteOgImage from "./og-templates/site";
-import type { Post } from "env";
+import type { Post } from "types";
 
 const fetchFonts = async () => {
   // Regular Font
@@ -50,10 +49,5 @@ function svgBufferToPngBuffer(svg: string) {
 
 export async function generateOgImageForPost(post: Post) {
   const svg = await satori(postOgImage(post), options);
-  return svgBufferToPngBuffer(svg);
-}
-
-export async function generateOgImageForSite() {
-  const svg = await satori(siteOgImage(), options);
   return svgBufferToPngBuffer(svg);
 }

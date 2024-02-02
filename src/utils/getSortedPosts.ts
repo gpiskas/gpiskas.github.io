@@ -1,7 +1,7 @@
-import type { Post } from "env";
+import type { Post } from "types";
 import postFilter from "./postFilter";
 
-const getSortedPosts = (posts: Post[]) => {
+const getSortedPosts = <T extends Post>(posts: T[]) => {
   return posts
     .filter(postFilter)
     .sort(

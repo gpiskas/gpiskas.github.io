@@ -5,7 +5,7 @@ import { SITE } from "@config";
 import Layout from "@layouts/Layout.astro";
 import Main from "@layouts/Main.astro";
 import { Image } from "astro:assets";
-import portrait from "@assets/images/gpiskas.png";
+import portrait from "@assets/images/gpiskas_round.png";
 import LinkButton from "@components/LinkButton.astro";
 import Hr from "@components/Hr.astro";
 ---
@@ -13,7 +13,7 @@ import Hr from "@components/Hr.astro";
 <Layout title={`${SITE.title} | About`}>
   <Header activeNav="about" />
   <Main pageTitle="About">
-    <section id="about" class="prose mx-auto mt-8 max-w-5xl">
+    <section id="about" class="prose max-w-full">
       <Image class="portrait" src={portrait} alt="Georgios Piskas" />
       <h3>I am a...</h3>
       <p>
@@ -39,25 +39,67 @@ import Hr from "@components/Hr.astro";
         <span class="highlight">Dreamer. Planner. Doer.</span>
       </p>
       <Hr />
+      <h3>Details</h3>
       <p>
         Visit my <LinkButton
           href="https://www.linkedin.com/in/gpiskas"
           title="Georgios Piskas on LinkedIn"
           ariaLabel="Georgios Piskas on LinkedIn"
-          newTab
-        >
-          LinkedIn Profile
-        </LinkButton> for more details.
+          newTab>LinkedIn Profile</LinkButton
+        > for more details.
       </p>
       <p>
         Reach out at <LinkButton
           href="mailto:gpiskas@gmail.com"
           title="Send an email to Georgios Piskas"
           ariaLabel="Send an email to Georgios Piskas"
-        >
-          gpiskas@gmail.com
-        </LinkButton> for business inquiries.
+          >gpiskas@gmail.com</LinkButton
+        > for business inquiries.
       </p>
+      <Hr />
+      <h3>Support</h3>
+      <p>
+        If you would like to support my work please consider one of the
+        following options:
+      </p>
+      <ul>
+        <li>
+          <LinkButton
+            href="https://github.com/sponsors/gpiskas"
+            title="Support Georgios Piskas via Github"
+            disabled
+            >Github Sponsors (coming soon)
+          </LinkButton>
+        </li>
+        <li>
+          <LinkButton
+            href="https://buy.stripe.com/28obMAdue2or07udQR"
+            title="Support Georgios Piskas via Stripe (monthly subscription)"
+            >Stripe (monthly subscription)
+          </LinkButton>
+        </li>
+        <li>
+          <LinkButton
+            href="https://donate.stripe.com/9AQcQE61M6EHcUg9AA"
+            title="Support Georgios Piskas via Stripe (one-time donation)"
+            >Stripe (one-time donation)
+          </LinkButton>
+        </li>
+        <li>
+          <LinkButton
+            href="https://paypal.me/gpiskas"
+            title="Support Georgios Piskas via PayPal (one-time donation)"
+            >PayPal (one-time donation)
+          </LinkButton>
+        </li>
+        <li>
+          <LinkButton
+            href="https://ko-fi.com/gpiskas"
+            title="Support Georgios Piskas via Ko-Fi"
+            >Buy me a coffee (subscription or donation)
+          </LinkButton>
+        </li>
+      </ul>
     </section>
   </Main>
   <Footer />

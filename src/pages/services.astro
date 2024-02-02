@@ -10,17 +10,13 @@ import LinkButton from "@components/LinkButton.astro";
 <Layout title={`${SITE.title} | Services`}>
   <Header activeNav="services" />
   <Main pageTitle="Services">
-    <section id="services" class="prose mx-auto mt-8 max-w-5xl">
+    <section id="services" class="prose max-w-full">
       <p>
         Please reach out at <LinkButton
           href="mailto:gpiskas@gmail.com"
           title="Send an email to Georgios Piskas"
-          ariaLabel="Send an email to Georgios Piskas"
-          newTab
-        >
-          gpiskas@gmail.com
-        </LinkButton> with a description of your needs and an estimate in budget
-        and time.
+          newTab>gpiskas@gmail.com</LinkButton
+        > with a description of your needs and an estimate in budget and time.
       </p>
       <h3 id="consulting">Consulting:</h3>
       <ul>

@@ -1,5 +1,5 @@
 import { SITE } from "@config";
-import type { Post } from "env";
+import type { Post } from "types";
 
 export default (post: Post) => {
   return (
@@ -54,7 +54,7 @@ export default (post: Post) => {
         >
           <p
             style={{
-              fontSize: 72,
+              fontSize: 48,
               fontWeight: "bold",
               maxHeight: "84%",
               overflow: "hidden",
@@ -71,20 +71,6 @@ export default (post: Post) => {
               fontSize: 28,
             }}
           >
-            <span>
-              by{" "}
-              <span
-                style={{
-                  color: "transparent",
-                }}
-              >
-                "
-              </span>
-              <span style={{ overflow: "hidden", fontWeight: "bold" }}>
-                {post.data.author}
-              </span>
-            </span>
-
             <span style={{ overflow: "hidden", fontWeight: "bold" }}>
               {SITE.title}
             </span>

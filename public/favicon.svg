@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-  <path d="M16.632 14.225a1 1 0 0 1 .143 1.407 6 6 0 0 1-9.55 0 1 1 0 0 1 1.55-1.264 4 4 0 0 0 6.45 0 1 1 0 0 1 1.407-.143zM23 12A11 11 0 1 1 12 1a11.013 11.013 0 0 1 11 11zm-2 0a9 9 0 1 0-9 9 9.01 9.01 0 0 0 9-9z"/>
-	<style>
-    @media (prefers-color-scheme:dark){:root{filter:invert(100%)}}
-  </style>
-</svg>

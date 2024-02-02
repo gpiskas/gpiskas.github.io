@@ -2,8 +2,9 @@
 import { getCollection } from "astro:content";
 import getSortedPosts from "@utils/getSortedPosts";
 import Projects from "@layouts/Projects.astro";
+import type { ProjectPost } from "types";
 
-const posts = await getCollection("projects");
+const posts: ProjectPost[] = await getCollection("projects");
 const sortedPosts = getSortedPosts(posts);
 ---
 

@@ -1,6 +1,6 @@
 import { slugifyStr } from "./slugify";
 import postFilter from "./postFilter";
-import type { Post } from "env";
+import type { Post } from "types";
 
 interface Tag {
   tag: string;

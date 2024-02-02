@@ -1,4 +1,4 @@
-import type { Post } from "env";
+import type { Post } from "types";
 import getSortedPosts from "./getSortedPosts";
 import { slugifyAll } from "./slugify";
 
