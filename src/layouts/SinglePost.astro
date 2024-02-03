@@ -6,10 +6,10 @@ import Tag from "@components/Tag.astro";
 import Datetime from "@components/Datetime";
 import { slugifyStr } from "@utils/slugify";
 import { SITE } from "@config";
-import type { BlogPost } from "types";
+import type { PostEntry } from "types";
 
 export interface Props {
-  post: BlogPost;
+  post: PostEntry;
 }
 
 const { post } = Astro.props;

@@ -1,12 +1,12 @@
 import Fuse from "fuse.js";
 import { useEffect, useRef, useState, useMemo } from "react";
-import Card from "@components/Card";
-import type { BlogPost } from "types";
+import PostCard from "@components/PostCard";
+import type { PostEntry } from "types";
 
 export type SearchItem = {
   title: string;
   description: string;
-  data: BlogPost["data"];
+  data: PostEntry["data"];
   slug: string;
 };
 
@@ -111,7 +111,7 @@ export default function SearchBar({ searchList }: Props) {
       <ul>
         {searchResults &&
           searchResults.map(({ item, refIndex }) => (
-            <Card
+            <PostCard
               href={`/posts/${item.slug}/`}
               frontmatter={item.data}
               key={`${refIndex}-${item.slug}`}

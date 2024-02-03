@@ -1,10 +1,10 @@
 ---
-import { getCollection } from "astro:content";
 import getSortedPosts from "@utils/getSortedPosts";
 import Projects from "@layouts/Projects.astro";
-import type { ProjectPost } from "types";
+import type { ProjectEntry } from "types";
+import { getProjects } from "@utils/collections";
 
-const posts: ProjectPost[] = await getCollection("projects");
+const posts: ProjectEntry[] = await getProjects();
 const sortedPosts = getSortedPosts(posts);
 ---
 

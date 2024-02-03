@@ -1,12 +1,12 @@
-import type { BlogPost } from "types";
+import type { ProjectEntry } from "types";
 import Datetime from "./Datetime";
 
 export interface Props {
   href?: string;
-  frontmatter: BlogPost["data"];
+  frontmatter: ProjectEntry["data"];
 }
 
-export default function Card({ href, frontmatter }: Props) {
+export default function ProjectCard({ href, frontmatter }: Props) {
   const { title, pubDatetime, modDatetime, description } = frontmatter;
 
   const headerProps = {

@@ -5,9 +5,9 @@
   "frontMatter.content.publicFolder": "public",
   "frontMatter.content.pageFolders": [
     {
-      "title": "pages",
-      "previewPath": "pages",
-      "path": "[[workspace]]/src/content/blog"
+      "title": "posts",
+      "previewPath": "posts",
+      "path": "[[workspace]]/src/content/posts"
     },
     {
       "title": "projects",

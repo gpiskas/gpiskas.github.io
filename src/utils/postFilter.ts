@@ -1,7 +1,7 @@
 import { SITE } from "@config";
-import type { Post } from "types";
+import type { Publication } from "types";
 
-const postFilter = <T extends Post>({ data }: T) => {
+const postFilter = <T extends Publication>({ data }: T) => {
   const isPublishTimePassed =
     Date.now() >
     new Date(data.pubDatetime).getTime() - SITE.scheduledPostMargin;

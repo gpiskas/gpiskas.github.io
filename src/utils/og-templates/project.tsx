@@ -1,7 +1,7 @@
 import { SITE } from "@config";
-import type { PostEntry } from "types";
+import type { ProjectEntry } from "types";
 
-export default (post: PostEntry) => {
+export default (post: ProjectEntry) => {
   return (
     <div
       style={{

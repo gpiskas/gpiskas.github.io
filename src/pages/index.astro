@@ -1,15 +1,15 @@
 ---
-import { getCollection } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import LinkButton from "@components/LinkButton.astro";
 import Hr from "@components/Hr.astro";
-import Card from "@components/Card";
+import PostCard from "@components/PostCard";
 import getSortedPosts from "@utils/getSortedPosts";
 import Main from "@layouts/Main.astro";
+import { getPosts } from "@utils/collections";
 
-const posts = await getCollection("blog");
+const posts = await getPosts();
 
 const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
@@ -32,7 +32,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
             <h2>Featured</h2>
             <ul>
               {featuredPosts.map(({ data, slug }) => (
-                <Card href={`/posts/${slug}/`} frontmatter={data} />
+                <PostCard href={`/posts/${slug}/`} frontmatter={data} />
               ))}
             </ul>
           </section>
@@ -49,7 +49,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
             {recentPosts.map(
               ({ data, slug }, index) =>
                 index < 4 && (
-                  <Card href={`/posts/${slug}/`} frontmatter={data} />
+                  <PostCard href={`/posts/${slug}/`} frontmatter={data} />
                 )
             )}
           </ul>
