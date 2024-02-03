@@ -1,0 +1,46 @@
+---
+import type { ProjectEntry } from "types";
+import Datetime from "./Datetime";
+import { Image } from "astro:assets";
+import projectImg from "@assets/images/gpiskas_round.png";
+
+export interface Props {
+  href?: string;
+  frontmatter: ProjectEntry["data"];
+}
+
+const { href, frontmatter } = Astro.props;
+const { title, description } = frontmatter;
+---
+
+<li class="card">
+  <Image class="image" src={projectImg} alt={title} />
+  <div>
+    <a class="link" href={href}>
+      <h2 class="header">{title}</h2>
+    </a>
+    <p class="description">{description}</p>
+  </div>
+</li>
+
+<style>
+  .card {
+    @apply mt-6 flex h-36 overflow-hidden border-b border-skin-line pb-2;
+  }
+
+  .image {
+    @apply mr-4 h-full w-fit object-contain;
+  }
+
+  .link {
+    @apply inline-block text-lg font-medium text-skin-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0;
+  }
+
+  .header {
+    @apply line-clamp-2 text-lg font-medium decoration-dashed hover:underline;
+  }
+
+  .description {
+    @apply line-clamp-3;
+  }
+</style>
