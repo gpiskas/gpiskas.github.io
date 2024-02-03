@@ -1,0 +1,63 @@
+{
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.framework.id": "astro",
+  "frontMatter.preview.host": "http://localhost:4321",
+  "frontMatter.content.publicFolder": "public",
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "pages",
+      "previewPath": "pages",
+      "path": "[[workspace]]/src/content/blog"
+    },
+    {
+      "title": "projects",
+      "previewPath": "projects",
+      "path": "[[workspace]]/src/content/projects"
+    }
+  ],
+  "frontMatter.taxonomy.contentTypes": [
+    {
+      "name": "default",
+      "pageBundle": false,
+      "filePrefix": null,
+      "clearEmpty": false,
+      "fields": [
+        {
+          "title": "title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "author",
+          "name": "author",
+          "type": "string"
+        },
+        {
+          "title": "pubDatetime",
+          "name": "pubDatetime",
+          "type": "datetime"
+        },
+        {
+          "title": "featured",
+          "name": "featured",
+          "type": "boolean"
+        },
+        {
+          "title": "draft",
+          "name": "draft",
+          "type": "draft"
+        },
+        {
+          "title": "tags",
+          "name": "tags",
+          "type": "tags"
+        }
+      ]
+    }
+  ]
+}
