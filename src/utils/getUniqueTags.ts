@@ -1,13 +1,13 @@
 import { slugifyStr } from "./slugify";
 import postFilter from "./postFilter";
-import type { Publication } from "types";
+import type { PostEntry } from "types";
 
 interface Tag {
   tag: string;
   tagName: string;
 }
 
-const getUniqueTags = <T extends Publication>(posts: T[]) => {
+const getUniqueTags = (posts: PostEntry[]) => {
   const tags: Tag[] = posts
     .filter(postFilter)
     .flatMap(post => post.data.tags)
