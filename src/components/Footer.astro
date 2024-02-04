@@ -1,9 +1,7 @@
 ---
+import Copyright from "@components/Copyright.astro";
 import Hr from "./Hr.astro";
 import Socials from "./Socials.astro";
-import { SITE } from "@config";
-
-const currentYear = new Date().getFullYear();
 
 export interface Props {
   noMarginTop?: boolean;
@@ -17,7 +15,7 @@ const { noMarginTop = false } = Astro.props;
   <div class="footer-wrapper">
     <Socials />
     <div class="copyright-wrapper">
-      <span>{SITE.author} &#169; {currentYear}</span>
+      <span><Copyright /></span>
       <span class="separator">&nbsp;|&nbsp;</span>
       <span class="highlight">The code you don't write has no bugs.</span>
     </div>

@@ -17,10 +17,10 @@
   ],
   "frontMatter.taxonomy.contentTypes": [
     {
-      "name": "default",
+      "name": "post",
       "pageBundle": false,
       "filePrefix": null,
-      "clearEmpty": false,
+      "clearEmpty": true,
       "fields": [
         {
           "title": "title",
@@ -43,6 +43,11 @@
           "type": "datetime"
         },
         {
+          "title": "modDatetime",
+          "name": "modDatetime",
+          "type": "datetime"
+        }
+        {
           "title": "featured",
           "name": "featured",
           "type": "boolean"
@@ -56,6 +61,49 @@
           "title": "tags",
           "name": "tags",
           "type": "tags"
+        }
+      ]
+    },
+    {
+      "name": "project",
+      "pageBundle": false,
+      "filePrefix": null,
+      "clearEmpty": true,
+      "fields": [
+        {
+          "title": "title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "projectImage",
+          "name": "projectImage",
+          "type": "image"
+        },
+        {
+          "title": "author",
+          "name": "author",
+          "type": "string"
+        },
+        {
+          "title": "pubDatetime",
+          "name": "pubDatetime",
+          "type": "datetime"
+        },
+        {
+          "title": "modDatetime",
+          "name": "modDatetime",
+          "type": "datetime"
+        },
+        {
+          "title": "draft",
+          "name": "draft",
+          "type": "draft"
         }
       ]
     }

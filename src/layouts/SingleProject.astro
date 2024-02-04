@@ -2,8 +2,6 @@
 import Layout from "@layouts/Layout.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
-import Tag from "@components/Tag.astro";
-import Datetime from "@components/Datetime";
 import { slugifyStr } from "@utils/slugify";
 import { SITE } from "@config";
 import type { ProjectEntry } from "types";
@@ -22,7 +20,6 @@ const {
   canonicalURL,
   pubDatetime,
   modDatetime,
-  tags,
 } = post.data;
 
 const { Content } = await post.render();
@@ -61,19 +58,9 @@ const layoutProps = {
   </div>
   <main id="main-content">
     <h1 class="post-title">{title}</h1>
-    <Datetime
-      pubDatetime={pubDatetime}
-      modDatetime={modDatetime}
-      size="lg"
-      className="my-2"
-    />
-    <article id="article" role="article" class="prose max-w-full">
+    <article id="article" role="article" class="prose max-w-full mt-4">
       <Content />
     </article>
-
-    <ul class="my-8">
-      {tags.map((tag: string) => <Tag tag={slugifyStr(tag)} />)}
-    </ul>
 
     <div
       class="flex flex-col-reverse items-center justify-between gap-6 sm:flex-row-reverse sm:items-end sm:gap-4"
@@ -99,7 +86,7 @@ const layoutProps = {
     @apply mx-auto w-full max-w-5xl px-4 pb-12;
   }
   .post-title {
-    @apply text-2xl font-semibold text-skin-accent;
+    @apply text-3xl font-semibold text-skin-accent;
   }
 </style>
 

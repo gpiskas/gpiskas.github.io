@@ -1,0 +1,82 @@
+---
+title: Streamdog | Your loyal avatar companion
+description: A customizable avatar for your stream or recording that imitates mouse clicks and keystrokes. Ideal for those who don't want to use a camera.
+projectImage: ../../assets/images/projects/streamdog/streamdog.png
+author: Georgios Piskas
+pubDatetime: 2024-02-04T20:39:16.331Z
+slug: streamdog
+type: project
+---
+
+import streamdog from '../../assets/images/projects/streamdog/streamdog.mp4';
+import Copyright from "@components/Copyright.astro";
+import LinkButton from "@components/LinkButton.astro";
+
+| Download | License |
+| -------- | ------- |
+| <LinkButton href="/release/Streamdog_1.0.0_x64-setup.exe">Streamdog 1.0.0</LinkButton> <br/> <Copyright/> | Free for personal use <br/> <LinkButton href="/terms">Terms of Use</LinkButton>| 
+     
+Streamdog is an avatar app that will imitate your clicks and keystrokes in real time, bringing some life to your stream or recording.
+It is an ideal companion for those who don't want to use a camera. \
+You can easily customize it or create new skins. All you need is an image editor and some creativity.
+
+## Features & Demo
+<div class="grid-2">
+- Imitates your clicks and keystrokes in real time
+- Transparent background to blend with your scene
+- Trivial to integrate in recording tools like OBS
+- Switch between built-in skins or create your own
+- Very easily customizable using any image editor
+- Option to hide keystrokes and keep always on top
+- Free for personal use
+- <LinkButton href="/about">Your support is greatly appreciated</LinkButton>
+
+<video style="margin: auto;"
+  src={streamdog}
+  title="Streamdog demo"   
+  width="400" 
+  height="400" 
+  autoplay
+  muted
+  loop
+  controls>
+</video>
+</div>
+
+
+## Skins & Customization
+
+To create new skins or edit existing ones, open the context menu (`right click or burger icon`) and select `Info & Customization`.
+This will open up the `skins` folder, where you can edit existing `.png` files or create new ones.
+Skin changes or new skins will appear immediately on the screen or the dropdown.
+
+A skins consists of these four self-explanatory parts. The skin name is the name of the folder.
+- `background.png`
+- `mouse.png`
+- `mouseArm.png`
+- `keyboardArm.png`
+
+
+This is how a skin looks like. The `.xcf` files can be edited with <LinkButton href="https://www.gimp.org/" newTab>GIMP</LinkButton>.
+
+![Streamdog Skins](../../assets/images/projects/streamdog/streamdog_skins.png)
+
+
+Here are a few of the predefined skins and the context menu.
+
+<div class="grid-p">
+![Streamdog Skin Dog](../../assets/images/projects/streamdog/streamdog_skin_dog.png)
+![Streamdog Skin Bongocat](../../assets/images/projects/streamdog/streamdog_skin_bongocat.png)
+![Streamdog Skin Harold](../../assets/images/projects/streamdog/streamdog_skin_harold.png)
+![Streamdog Settings Context Menu](../../assets/images/projects/streamdog/streamdog_settings.png)
+</div>
+
+
+## Drag & Drop Layout
+
+You can drag & drop images and animated GIFs directly in Streamdog and adjust their position, rotation and scale.
+The layout tools and the window border will automatically disappear when Streamdog is not in focus.
+The layout is saved automatically and restored on relaunch, separately for each skin. \
+`Pro Tip:` you can copy a layout to another skin simply by copying `.layout.html` to its folder.
+
+![Streamdog Drag & Drop animated GIFs and Images](../../assets/images/projects/streamdog/streamdog_drag_drop.png)

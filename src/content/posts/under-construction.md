@@ -11,6 +11,7 @@ tags:
   - projects
   - services
   - about
+type: post
 ---
 
 Under construction...

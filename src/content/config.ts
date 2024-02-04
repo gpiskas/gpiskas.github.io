@@ -33,7 +33,6 @@ const projects = defineCollection({
       title: z.string(),
       featured: z.boolean().optional(),
       draft: z.boolean().optional(),
-      tags: z.array(z.string()).default(["project"]),
       projectImage: image()
         .refine(img => img.width == img.height && img.width >= 200, {
           message: "Project image must be square and at least 200 pixels!",
