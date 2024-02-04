@@ -14,6 +14,9 @@ const posts = await getPosts();
 const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
+
+let featuredPostsDisplayCount = Math.min(featuredPosts.length, 3);
+let recentPostsDisplayCount = Math.min(recentPosts.length, 5 - featuredPostsDisplayCount);
 ---
 
 <Layout>
@@ -22,25 +25,27 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
     <section id="services" class="prose max-w-full">
       <p>
         Things I do, stuff I make, facts I share and code I break. Check out the links on top.
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-big-up" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 20v-8h-3.586a1 1 0 0 1 -.707 -1.707l6.586 -6.586a1 1 0 0 1 1.414 0l6.586 6.586a1 1 0 0 1 -.707 1.707h-3.586v8a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-big-up" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M9 20v-8h-3.586a1 1 0 0 1 -.707 -1.707l6.586 -6.586a1 1 0 0 1 1.414 0l6.586 6.586a1 1 0 0 1 -.707 1.707h-3.586v8a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"></path></svg>
       </p>
     </section>
     {
       featuredPosts.length > 0 && (
         <>
-          <section id="featured">
-            <h2>Featured</h2>
+          <section id="featured-posts">
+            <h2>Featured Posts</h2>
             <ul>
-              {featuredPosts.map(({ data, slug }) => (
-                <PostCard href={`/posts/${slug}/`} frontmatter={data} />
-              ))}
+              {featuredPosts.map(
+                ({ data, slug }, index) =>
+                  index < featuredPostsDisplayCount && (
+                    <PostCard href={`/posts/${slug}/`} frontmatter={data} />
+                  )
+              )}
             </ul>
           </section>
           {recentPosts.length > 0 && <Hr />}
         </>
       )
     }
-
     {
       recentPosts.length > 0 && (
         <section id="recent-posts">
@@ -48,7 +53,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
           <ul>
             {recentPosts.map(
               ({ data, slug }, index) =>
-                index < 4 && (
+                index < recentPostsDisplayCount && (
                   <PostCard href={`/posts/${slug}/`} frontmatter={data} />
                 )
             )}
@@ -60,11 +65,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
     <div class="all-posts-btn-wrapper">
       <LinkButton href="/posts/">
         All Posts
-        <svg xmlns="http://www.w3.org/2000/svg"
-          ><path
-            d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
-          ></path>
-        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg"><path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path></svg>
       </LinkButton>
     </div>
   </Main>
@@ -73,11 +74,11 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 
 <style>
   /* ===== Featured & Recent Posts Sections ===== */
-  #featured,
+  #featured-posts,
   #recent-posts {
     @apply pb-6 pt-6;
   }
-  #featured h2,
+  #featured-posts h2,
   #recent-posts h2 {
     @apply text-2xl font-semibold tracking-wide;
   }
