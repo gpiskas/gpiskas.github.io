@@ -15,9 +15,9 @@ const { title, description, projectImage } = frontmatter;
   <Image class="image" src={projectImage} alt={title} />
   <div>
     <a class="link" href={href}>
-      <h2 class="header">{title}</h2>
+      <h2 class="header line-clamp-2-inline">{title}</h2>
     </a>
-    <p class="description">{description}</p>
+    <p class="line-clamp-3-inline">{description}</p>
   </div>
 </li>
 
@@ -35,10 +35,7 @@ const { title, description, projectImage } = frontmatter;
   }
 
   .header {
-    @apply line-clamp-2 text-lg font-medium decoration-dashed hover:underline;
+    @apply text-lg font-medium decoration-dashed hover:underline;
   }
 
-  .description {
-    @apply line-clamp-3;
-  }
 </style>

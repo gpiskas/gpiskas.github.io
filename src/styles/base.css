@@ -132,15 +132,25 @@
   .focus-outline {
     @apply outline-2 outline-offset-1 outline-skin-fill focus-visible:no-underline focus-visible:outline-dashed;
   }
+
+  .highlight {
+    @apply bg-skin-card;
+  }
 }
 
-.highlight {
-  @apply bg-skin-card;
-}
-
-.grid-2 {
-  @apply grid sm:grid-cols-2 grid-cols-1
-}
-.grid-p p {
-  @apply grid sm:grid-cols-2 grid-cols-1
+@layer utilities {
+  .grid-2 {
+    @apply grid sm:grid-cols-2 grid-cols-1
+  }
+  .grid-p p {
+    @apply grid sm:grid-cols-2 grid-cols-1
+  }
+  .line-clamp-2-inline {
+    @apply line-clamp-2;
+    display: -webkit-inline-box;
+  }
+  .line-clamp-3-inline {
+    @apply line-clamp-3;
+    display: -webkit-inline-box;
+  }
 }

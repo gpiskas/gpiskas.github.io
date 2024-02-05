@@ -10,7 +10,7 @@ export default function PostCard({ href, frontmatter }: Props) {
   const { title, pubDatetime, modDatetime, description } = frontmatter;
 
   const headerProps = {
-    className: "text-lg line-clamp-2 font-medium decoration-dashed hover:underline",
+    className: "text-lg line-clamp-2-inline font-medium decoration-dashed hover:underline",
   };
 
   return (
@@ -22,7 +22,7 @@ export default function PostCard({ href, frontmatter }: Props) {
         <h2 {...headerProps}>{title}</h2>
       </a>
       <Datetime pubDatetime={pubDatetime} modDatetime={modDatetime} />
-      <p className="line-clamp-2">{description}</p>
+      <p className="line-clamp-2-inline">{description}</p>
     </li>
   );
 }
