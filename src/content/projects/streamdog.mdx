@@ -32,14 +32,15 @@ You can easily customize it or create new skins. All you need is an image editor
 - <LinkButton href="/about">Your support is greatly appreciated</LinkButton>
 
 <video style="margin: auto;"
-  src={streamdog}
   title="Streamdog demo"   
   width="400" 
   height="400" 
   autoplay
   muted
   loop
-  controls>
+  controls
+  playsinline>
+  <source src={streamdog} type="video/mp4"/>
 </video>
 </div>
 
