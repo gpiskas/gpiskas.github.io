@@ -136,6 +136,14 @@
   .highlight {
     @apply bg-skin-card;
   }
+
+  .tip {
+    @apply bg-skin-card p-2 rounded;
+  }
+  .tip:before {
+    content: "Pro Tip: ";
+    @apply font-semibold text-skin-accent;
+  }
 }
 
 @layer utilities {
