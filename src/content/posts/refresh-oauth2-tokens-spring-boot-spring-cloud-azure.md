@@ -24,7 +24,7 @@ Before diving into implementation details, let's understand the importance of to
 
 This is especially relevant in connection to the expiry of a session, which is an independent procedure handled by the app server (e.g. Tomcat).
 
-<p class="tip">Check the contents of your tokens on <a href="https://jwt.io/">jwt.io</a><p>
+<p class="tip">You can check the contents of your tokens on <a href="https://jwt.io/">jwt.io</a><p>
 
 ## Integrating Azure Entra ID (Azure AD) with Spring Boot
 Spring Boot provides integration with Azure Entra ID through [**Spring Cloud Azure**](https://learn.microsoft.com/en-us/azure/developer/java/spring-framework/configure-spring-boot-starter-java-app-with-azure-active-directory). By configuring Azure AD properties and dependencies in your Spring Boot application, you can enable OAuth2-based authentication with Azure AD. This integration simplifies the authentication process and provides seamless access to Azure resources. Here is how you can achieve this:
