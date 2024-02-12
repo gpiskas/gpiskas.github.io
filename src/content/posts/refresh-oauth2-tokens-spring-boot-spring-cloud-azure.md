@@ -153,5 +153,5 @@ By configuring the filter chain order, we'll ensure that our custom token refres
     .addFilterBefore(expiredTokenFilter, OAuth2AuthorizationRequestRedirectFilter.class)
 ```
 
-## Conclusion:
+## Conclusion
 Efficient token management is crucial for ensuring secure and seamless authentication in Spring Boot applications. By integrating Spring Cloud Azure and implementing custom token refresh logic with filters, developers can enhance token management capabilities, improve user experience, and bolster application security. Implementing such practices not only ensures smooth operation but also demonstrates a commitment to best practices in authentication and security.
