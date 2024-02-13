@@ -86,7 +86,7 @@ Once your template is created, simply go ahead and launch it, it can't get any s
     <li><b>src-tauri</b>: Tauri / Backend code and resources</li>
     <li><b>/icons</b>: used as native application icons</li>
     <li><b>/src</b>: Rust / Backend code</li>
-    <li><b>/target</b>: Build artifacts are stored here</li>
+    <li><b>/target</b>: build artifacts are stored here</li>
   </ul>
 
 <p>Some important files:</p>
@@ -159,7 +159,7 @@ fn get_display_size() -> (u64, u64) {
 }
 ```
 
-This is more or less the complete setup of the Tauri and Rust backend. Pretty sleek, right?
+This is more or less the complete setup of the Tauri and Rust backend. Short and sweet.
 
 ## Interaction between Tauri and React
 
@@ -191,12 +191,12 @@ export default function Mouse() {
 
 ## How Streamdog Works
 
-With the mouse and keyboard events exposed to the frontend, it's only a matter of consuming them and calculating positions and angles for the movement of the arms and other visual effects. The frontend of Streamdog is structured in components according to responsibility, such as `Mouse`, `Keyboard`, `DropArea` and so on. Each components listens to the events it needs to and reacts accordingly.
+With the mouse and keyboard events exposed to the frontend, it's only a matter of consuming them and calculating positions and angles for the movement of the arms and other visual effects. The frontend of Streamdog is structured in components according to responsibility, such as `Mouse`, `Keyboard`, `DropArea` and so on. Each component listens to the events it needs and reacts accordingly.
 
 Another crucial feature of Streamdog is skins support. Using Tauri APIs we are able to natively read and write to the file system, where the skins and config files are stored. Also, skin changes are immediately reflected on screen by watching for file system modifications.
 
-Streamdog is build and released for Windows because that is the main use case - to be used along with gaming and streaming. However, there is nothing blocking it from being available on any Tauri supported platform.
+Streamdog is built and released for Windows because that is the main use case - to be used along with gaming and streaming. However, there is nothing blocking it from being available on any other Tauri supported platform.
 
 ## Conclusion
 
- By leveraging Tauri and React I was able to build Streamdog in a very short time frame while also learning new technologies and techniques. The developer experience is smooth and the feedback cycle is short enough to maintain your flow state. Using richer frameworks such as Next.js instead of plain React would also be a great option in case a full-blown application is required.
+By leveraging Tauri and React I was able to build Streamdog in a very short time frame while also learning new technologies and techniques. The developer experience is smooth and the feedback cycle is short enough to maintain your flow state. Using richer frameworks such as Next.js instead of plain React would also be a great option in case a full-blown application is required.
