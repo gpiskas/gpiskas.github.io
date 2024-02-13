@@ -22,7 +22,7 @@ export default function PostCard({ href, frontmatter }: Props) {
         <h2 {...headerProps}>{title}</h2>
       </a>
       <Datetime pubDatetime={pubDatetime} modDatetime={modDatetime} />
-      <p className="line-clamp-2-inline">{description}</p>
+      <p className="line-clamp-3-inline sm:line-clamp-2-inline">{description}</p>
     </li>
   );
 }
