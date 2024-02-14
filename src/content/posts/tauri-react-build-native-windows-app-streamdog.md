@@ -2,7 +2,7 @@
 title: Using Tauri & React to Build a Native Windows App, Streamdog
 description: How I built Streamdog by leveraging my existing React knowledge for the frontend and using Tauri as a backend and native toolkit.
 author: Georgios Piskas
-pubDatetime: 2024-02-11T18:59:32.283Z
+pubDatetime: 2024-02-14T18:14:04.165Z
 slug: tauri-react-build-native-windows-app-streamdog
 featured: true
 draft: false
