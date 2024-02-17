@@ -144,6 +144,13 @@
     content: "Pro Tip: ";
     @apply font-semibold text-skin-accent;
   }
+  .source {
+    @apply text-xs my-2 text-right;
+  }
+  .source:before {
+    content: "Source: ";
+    @apply font-semibold text-skin-accent;
+  }
 }
 
 @layer utilities {

@@ -19,6 +19,8 @@ type: post
 
 In modern web applications, security is paramount. Implementing secure authentication mechanisms ensures that only authorized users can access protected resources. Spring Boot provides robust support for security features, including OAuth2 integration for authentication with Azure Entra ID (Azure AD). However, managing OAuth2 tokens efficiently, especially token refreshing, can be challenging. In this blog post, we'll explore how to enhance token management in a Spring Boot application using Spring Cloud Azure and a simple servlet filter.
 
+## Table of Contents
+
 ## Understanding Token Management
 Before diving into implementation details, let's understand the importance of token management in OAuth2-based authentication. OAuth2 tokens, such as **access tokens** and **refresh tokens**, play a crucial role in securing APIs and resources. Access tokens grant access to protected resources, while refresh tokens are used to obtain new access tokens without requiring user credentials. Managing token **expiration and refreshing** tokens before they expire is essential for maintaining seamless user experiences and security.
 

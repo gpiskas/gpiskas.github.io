@@ -22,6 +22,8 @@ type: post
 
 ![Streamdog Skin Dog](../../assets/images/projects/streamdog/streamdog_skin_dog.png)
 
+## Table of Contents
+
 ## Tech Stack
 Streamdog is built using [Tauri](https://tauri.app/) and [React](https://react.dev/). I was already familiar with React and looked for a way to leverage my existing knowledge for building a native app. At this point I considered Tauri and Electron, and decided to go with the former which is the newer and more lightweight option. Tauri has proven to be very easy to use and work with. The developer experience just feels great.
 
