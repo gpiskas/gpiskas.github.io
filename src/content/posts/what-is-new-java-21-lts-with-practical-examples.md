@@ -1,6 +1,6 @@
 ---
 title: What is New in Java 21 (LTS), with Practical Examples
-description: Find out the new features and enhancements introduced in Java 21, including practical examples and code snippets for Java developers.
+description: Discover all new features introduced in Java 21, including practical examples and code snippets for developers. Also includes notable features since Java 17.
 author: Georgios Piskas
 pubDatetime: 2024-02-17T15:24:56.631Z
 slug: what-is-new-java-21-lts-with-practical-examples
@@ -9,11 +9,12 @@ draft: false
 tags:
   - java
   - features
+  - upgrade
   - spring
 type: post
 ---
 
-Java, one of the most enduring and widely used programming languages, continues to evolve with each release, offering developers new tools and capabilities to create robust and efficient applications. With the arrival of Java 21, the latest **Long-Term Support (LTS)** version, developers have access to a plethora of new features and enhancements that further boost the language's versatility and performance. In this blog post, we will find out what is new and noteworthy in Java 21, which reached **General Availability (GA) on 19.09.2023**.
+Java, one of the most enduring and widely used programming languages, continues to evolve with each release, offering developers new tools and capabilities to create robust and efficient applications. With the arrival of Java 21, the latest **Long-Term Support (LTS)** version, developers have access to a plethora of new features and enhancements that further boost the language's versatility and performance. In this blog post, we will find out what is new and noteworthy in Java 21, which reached **General Availability (GA) on 19.09.2023**, but also what has been released since Java 17.
 
 ## Table of Contents
 
@@ -42,7 +43,7 @@ Java, one of the most enduring and widely used programming languages, continues 
 - [Vector API (Sixth Incubator)](https://openjdk.org/jeps/448)
 
 
-## Features Breakdown
+## Finalized Features Breakdown
 We will be focusing on finalized features, especially those that have a more practical application for developers.
 
 
@@ -220,4 +221,45 @@ If you are using dynamically loaded agents, read more [here](https://openjdk.org
 ### Deprecate the Windows 32-bit x86 Port for Removal
 >Deprecate the Windows 32-bit x86 port, with the intent to remove it in a future release.
 
-The world moves on. Read more [here](https://openjdk.org/jeps/449).
+Java keeps evolving. Read more [here](https://openjdk.org/jeps/449).
+
+## Notable Features Since Java 17 (LTS)
+If you are upgrading from Java 17, keep reading for the most relevant changes, or have a look [here](https://openjdk.org/projects/jdk/21/jeps-since-jdk-17).
+
+### Simple Web Server
+>Provide a command-line tool to start a minimal web server that serves static files only. No CGI or servlet-like functionality is available. This tool will be useful for prototyping, ad-hoc coding, and testing purposes, particularly in educational contexts.
+
+All you need to do is run `jwebserver`. Use `--help` for usage instructions.
+```bash
+$ jwebserver
+  Binding to loopback by default. For all interfaces use "-b 0.0.0.0" or "-b ::".
+  Serving /cwd and subdirectories on 127.0.0.1 port 8000
+  URL: http://127.0.0.1:8000/
+```
+
+### Code Snippets in Java API Documentation
+>Introduce an @snippet tag for JavaDoc's Standard Doclet, to simplify the inclusion of example source code in API documentation.
+
+Improve your documentation using `@snippet` as in the following example.
+```java
+/**
+ * This is how you can use the {@code Point} record:
+ * {@snippet :
+ * boolean isZero(Point p) {
+ *  return p.x == 0 && p.y == 0;
+ * }
+ * }
+ */
+```
+
+### UTF-8 by Default
+>Specify UTF-8 as the default charset of the standard Java APIs. With this change, APIs that depend upon the default charset will behave consistently across all implementations, operating systems, locales, and configurations.
+- Make Java programs more predictable and portable when their code relies on the default charset.
+- Clarify where the standard Java API uses the default charset.
+- Standardize on UTF-8 throughout the standard Java APIs, except for console I/O.
+
+### Deprecate Finalization for Removal
+>Deprecate finalization for removal in a future release. Finalization remains enabled by default for now, but can be disabled to facilitate early testing. In a future release it will be disabled by default, and in a later release it will be removed. Maintainers of libraries and applications that rely upon finalization should consider migrating to other resource management techniques such as the try-with-resources statement and cleaners.
+- Help developers understand the dangers of finalization.
+- Prepare developers for the removal of finalization in a future version of Java.
+- Provide simple tooling to help detect reliance upon finalization.
