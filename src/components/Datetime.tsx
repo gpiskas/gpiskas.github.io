@@ -46,15 +46,16 @@ export default function Datetime({
 const FormattedDatetime = ({ pubDatetime, modDatetime }: DatetimesProps) => {
   const myDatetime = new Date(modDatetime ? modDatetime : pubDatetime);
 
-  const date = myDatetime.toLocaleDateString([], {
+  const date = myDatetime.toLocaleDateString('en-US', {
     year: "numeric",
     month: "short",
     day: "numeric",
   });
 
-  const time = myDatetime.toLocaleTimeString([], {
+  const time = myDatetime.toLocaleTimeString('en-US', {
     hour: "2-digit",
     minute: "2-digit",
+    hour12: false
   });
 
   return (
