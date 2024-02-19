@@ -13,10 +13,14 @@ const posts = await getPosts();
 
 const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
-const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
+const otherPosts = sortedPosts.filter(({ data }) => !data.featured);
+
+if (featuredPosts.length > 3) {
+  throw new Error("More than 3 featured posts!")
+}
 
 let featuredPostsDisplayCount = Math.min(featuredPosts.length, 3);
-let recentPostsDisplayCount = Math.min(recentPosts.length, 5 - featuredPostsDisplayCount);
+let otherPostsDisplayCount = Math.min(otherPosts.length, 5 - featuredPostsDisplayCount);
 ---
 
 <Layout>
@@ -32,7 +36,13 @@ let recentPostsDisplayCount = Math.min(recentPosts.length, 5 - featuredPostsDisp
       featuredPosts.length > 0 && (
         <>
           <section id="featured-posts">
+          <div class="posts-header">
             <h2>Featured Posts</h2>
+            <LinkButton className="posts-link" href="/posts/">
+              All Posts
+              <svg xmlns="http://www.w3.org/2000/svg"><path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path></svg>
+            </LinkButton>
+          </div>
             <ul>
               {featuredPosts.map(
                 ({ data, slug }, index) =>
@@ -42,18 +52,24 @@ let recentPostsDisplayCount = Math.min(recentPosts.length, 5 - featuredPostsDisp
               )}
             </ul>
           </section>
-          {recentPosts.length > 0 && <Hr />}
+          {otherPosts.length > 0 && <Hr />}
         </>
       )
     }
     {
-      recentPosts.length > 0 && (
-        <section id="recent-posts">
-          <h2>Recent Posts</h2>
+      otherPosts.length > 0 && (
+        <section id="other-posts">
+          <div class="posts-header">
+            <h2>Other Posts</h2>
+            <LinkButton className="posts-link" href="/posts/">
+              All Posts
+              <svg xmlns="http://www.w3.org/2000/svg"><path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path></svg>
+            </LinkButton>
+          </div>
           <ul>
-            {recentPosts.map(
+            {otherPosts.map(
               ({ data, slug }, index) =>
-                index < recentPostsDisplayCount && (
+                index < otherPostsDisplayCount && (
                   <PostCard href={`/posts/${slug}/`} frontmatter={data} />
                 )
             )}
@@ -61,28 +77,23 @@ let recentPostsDisplayCount = Math.min(recentPosts.length, 5 - featuredPostsDisp
         </section>
       )
     }
-
-    <div class="all-posts-btn-wrapper">
-      <LinkButton href="/posts/">
-        All Posts
-        <svg xmlns="http://www.w3.org/2000/svg"><path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path></svg>
-      </LinkButton>
-    </div>
   </Main>
   <Footer />
 </Layout>
 
 <style>
-  /* ===== Featured & Recent Posts Sections ===== */
   #featured-posts,
-  #recent-posts {
+  #other-posts {
     @apply pb-6 pt-6;
   }
   #featured-posts h2,
-  #recent-posts h2 {
+  #other-posts h2 {
     @apply text-2xl font-semibold tracking-wide;
   }
-  .all-posts-btn-wrapper {
-    @apply my-8 text-center;
+  .posts-header {
+    @apply flex justify-between items-center;
+  }
+  .posts-link {
+    @apply text-skin-accent text-sm
   }
 </style>

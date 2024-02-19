@@ -4,7 +4,7 @@ description: How I built Streamdog by leveraging my existing React knowledge for
 author: Georgios Piskas
 pubDatetime: 2024-02-14T18:14:04.165Z
 slug: tauri-react-build-native-windows-app-streamdog
-featured: true
+featured: false
 draft: false
 tags:
   - tauri

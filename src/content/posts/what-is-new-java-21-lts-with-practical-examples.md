@@ -3,6 +3,7 @@ title: What is New in Java 21 (LTS), with Practical Examples
 description: Discover all new features introduced in Java 21, including practical examples and code snippets for developers. Also includes notable features since Java 17.
 author: Georgios Piskas
 pubDatetime: 2024-02-17T15:24:56.631Z
+modDatetime: 2024-02-19T12:44:29.644Z
 slug: what-is-new-java-21-lts-with-practical-examples
 featured: true
 draft: false
@@ -157,6 +158,10 @@ List	       list.get(0)	                    list.get(list.size() - 1)
 Deque	       deque.getFirst()             	deque.getLast()
 SortedSet	   sortedSet.first()	            sortedSet.last()
 LinkedHashSet  linkedHashSet.iterator().next()	// missing
+
+Using Sequenced Collections:
+               list.getFirst()	                list.getLast()
+               // See the rest of the methods in the interfaces below
 ```
 
 The following diagram and implementations from ["JEP 431: Sequenced Collections"](https://openjdk.org/jeps/431) demonstrates how three new interfaces have been integrated into the existing `Collections` ecosystem.
