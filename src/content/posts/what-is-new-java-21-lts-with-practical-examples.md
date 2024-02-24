@@ -93,7 +93,7 @@ String formatUsingPatternMatching(Object obj) {
 }
 ```
 
-You can further refine the cases by using the `when` keyword. Unused variables can be replaced with a `_`.
+You can further refine the cases by using the `when` keyword. Unused variables can be replaced with a `_` if you enable the preview feature.
 
 ```java
 void refineCaseWithWhen(Point point) {
@@ -132,7 +132,7 @@ Code running on a virtual thread will occupy the OS thread only when necessary. 
 In practice, using virtual threads is as simple as changing the `Executor` implementation in existing code. Note that they should never be pooled because they are cheap and ideal for short-lived operations.
 
 ```java
-void run(List<Runnable<?>> runnables) {
+void run(List<Runnable> runnables) {
     // Before: Execute runnables with platform threads (bounded)
     int threads = Runtime.getRuntime().availableProcessors();
     try (var executor = Executors.newFixedThreadPool(threads)) {
