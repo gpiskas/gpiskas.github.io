@@ -29,7 +29,7 @@ public interface MyInterface {
     boolean implementMe();
 
     // Can be used by the concrete class
-    default boolvoidean myDefaultMethod() {
+    default void myDefaultMethod() {
         System.out.println("I am already implemented (default)");
     }
 
