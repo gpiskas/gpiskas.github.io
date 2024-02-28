@@ -1,5 +1,5 @@
 ---
-title: Creating Non-Expiring Secrets for an Azure App Registration
+title: Creating Non-Expiring Secrets for Azure App Registrations
 description: Learn how to create secrets that do not expire for Azure App Registrations using Azure CLI, ensuring long-lived credentials for testing and experimentation.
 author: Georgios Piskas
 pubDatetime: 2024-02-28T19:01:08.819Z
@@ -12,7 +12,7 @@ tags:
     - tokens
 type: post
 ---
-One common requirement for Azure App Registrations during application development is the need for long-lived credentials. While Azure App Registration Secrets typically have an expiration date, there's a workaround to create non-expiring keys using the [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/?view=azure-cli-latest). However, this should only be a temporary solution, typically used until a more secure one is in place such as the use of certificates. For more information refer to [the official announcement from Microsoft](https://devblogs.microsoft.com/microsoft365dev/client-secret-expiration-now-limited-to-a-maximum-of-two-years/) which explains why the non-expiring option was removed and describes alternatives.
+One common requirement for Azure App Registrations during application development is the need for long-lived credentials. While Azure App Registration secrets typically have an expiration date, there's a workaround to create non-expiring keys using the [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/?view=azure-cli-latest). However, this should only be a temporary solution, typically used until a more secure one is in place such as the use of certificates. For more information refer to [the official announcement from Microsoft](https://devblogs.microsoft.com/microsoft365dev/client-secret-expiration-now-limited-to-a-maximum-of-two-years/) which explains why the non-expiring option was removed and describes alternatives.
 
 The following command will create a secret lasting for 100 years for the given App Registration. Specify the Client Id, which you can find under `Essentials` in the `Overview` blade in the Azure Portal.
 ```sh
