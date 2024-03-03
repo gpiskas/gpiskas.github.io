@@ -5,7 +5,7 @@ author: Georgios Piskas
 pubDatetime: 2024-02-17T15:24:56.631Z
 modDatetime: 2024-02-19T12:44:29.644Z
 slug: what-is-new-java-21-lts-with-practical-examples
-featured: true
+featured: false
 draft: false
 tags:
   - java
