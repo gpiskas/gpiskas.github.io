@@ -6,6 +6,20 @@ import sitemap from "@astrojs/sitemap";
 import mdx from '@astrojs/mdx';
 import { SITE } from "./src/config";
 
+SITE.website
+
+const tags = new RegExp(SITE.website + "tags/.*");
+const search = new RegExp(SITE.website + "search/.*");
+const posts = new RegExp(SITE.website + "posts/(\\d+/)?$");
+const projects = new RegExp(SITE.website + "projects/(\\d+/)?$");
+
+const excludePagesFilter = (page: string) => {
+  return tags.test(page)
+    || search.test(page)
+    || posts.test(page)
+    || projects.test(page);
+}
+
 // https://astro.build/config
 export default defineConfig({
   site: SITE.website,
@@ -14,7 +28,9 @@ export default defineConfig({
       applyBaseStyles: false,
     }),
     react(),
-    sitemap(),
+    sitemap({
+      filter: (page) => !excludePagesFilter(page),
+    }),
     mdx(),
   ],
   image: {

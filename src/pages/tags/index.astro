@@ -13,7 +13,7 @@ const posts = await getPosts();
 let tags = getUniqueTags(posts);
 ---
 
-<Layout title={`${SITE.title} | Tags`}>
+<Layout title={`${SITE.title} | Tags`} noindex>
   <Header activeNav="tags" />
   <Main pageTitle="Tags">
     <ul>
