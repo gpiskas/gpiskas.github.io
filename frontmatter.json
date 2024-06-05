@@ -46,7 +46,7 @@
           "title": "modDatetime",
           "name": "modDatetime",
           "type": "datetime"
-        }
+        },
         {
           "title": "featured",
           "name": "featured",
