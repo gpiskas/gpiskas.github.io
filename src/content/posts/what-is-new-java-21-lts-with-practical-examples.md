@@ -15,15 +15,13 @@ tags:
 type: post
 ---
 
-Java, one of the most enduring and widely used programming languages, continues to evolve with each release, offering developers new tools and capabilities to create robust and efficient applications. With the arrival of Java 21, the latest **Long-Term Support (LTS)** version, developers have access to a plethora of new features and enhancements that further boost the language's versatility and performance. In this blog post, we will find out what is new and noteworthy in Java 21, which reached **General Availability (GA) on 19.09.2023**, but also what has been released since Java 17.
+In this blog post, we will find out what is new in Java 21, the latest **Long-Term Support (LTS)** version, which reached **General Availability (GA) on 19.09.2023**, but also what has been released since Java 17. Special focus is given to developer-oriented features.
 
 ## Table of Contents
 
 ## Features Overview
 
 ### Finalized Features
-> **Finalized features** are fully specified, fully implemented and permanent.
-
 - [Pattern Matching for switch](https://openjdk.org/jeps/441)
 - [Record Patterns](https://openjdk.org/jeps/440)
 - [Virtual Threads](https://openjdk.org/jeps/444)
@@ -34,7 +32,6 @@ Java, one of the most enduring and widely used programming languages, continues 
 - [Deprecate the Windows 32-bit x86 Port for Removal](https://openjdk.org/jeps/449)
 
 ### Preview And Incubator Features
-> **Preview features** are fully specified, fully implemented, but impermanent. They are made available to provoke developer feedback based on real world use. **Incubator features** are non-final APIs or tools that are made available to progress towards either finalization or removal in a future release.
 - [String Templates (Preview)](https://openjdk.org/jeps/430)
 - [Foreign Function & Memory API (Third Preview)](https://openjdk.org/jeps/442)
 - [Unnamed Patterns and Variables (Preview)](https://openjdk.org/jeps/443)
@@ -49,8 +46,6 @@ We will be focusing on finalized features, especially those that have a more pra
 
 
 ### Pattern Matching for switch
->Enhance the Java programming language with pattern matching for switch expressions and statements. Extending pattern matching to switch allows an expression to be tested against a number of patterns, each with a specific action, so that complex data-oriented queries can be expressed concisely and safely.
-
 Use type matching instead of `instanceof`, including for null checks. You can also expand composite types, such as the `Point` record in the example below. For blocks of code you can use `yield`. A switch statement can immediately return a result.
 
 Before Java 21:
@@ -110,8 +105,6 @@ boolean isZero(Point p) {
 ```
 
 ### Record Patterns
->Enhance the Java programming language with record patterns to deconstruct record values. Record patterns and type patterns can be nested to enable a powerful, declarative, and composable form of data navigation and processing.
-
 Records can be deconstructed by listing their components as follows. This can be done in many nested levels of records.
 ```java
 int recordPattern(Point point) {
@@ -123,8 +116,6 @@ int recordPattern(Point point) {
 ```
 
 ### Virtual Threads
->Introduce virtual threads to the Java Platform. Virtual threads are lightweight threads that dramatically reduce the effort of writing, maintaining, and observing high-throughput concurrent applications.
-
 Virtual threads preserve the familiar and easy to debug **thread-per-request** programming model, without being limited to the number of OS threads. The name virtual is due to the fact that they are not tied to a particular thread, in contrast to platform threads.
 
 Code running on a virtual thread will occupy the OS thread only when necessary. This allows for other virtual threads to take over when it's blocked (`work-stealing`), resulting in scalability comparable to asynchronous or reactive style programming. This is completely transparent to developers while optimally using the available hardware capacity.
@@ -149,8 +140,6 @@ void run(List<Runnable> runnables) {
 
 
 ### Sequenced Collections
->Introduce new interfaces to represent collections with a defined encounter order. Each such collection has a well-defined first element, second element, and so forth, up to the last element. It also provides uniform APIs for accessing its first and last elements, and for processing its elements in reverse order.
-
 In order to "fix" inconsistencies such as the ones below across Collection APIs regarding accessing elements in a well defined order, Sequenced Collections are introduced.
 ```java
                First element	                Last element
@@ -205,8 +194,6 @@ interface SequencedMap<K,V> extends Map<K,V> {
 For completeness, I am listing here the rest of the finalized features that are not practically or immediately applicable for the majority of Java developers. Please read the official specification for further details.
 
 ### Generational ZGC
->Improve application performance by extending the Z Garbage Collector (ZGC) to maintain separate generations for young and old objects. This will allow ZGC to collect young objects — which tend to die young — more frequently.
-
 [The specification](https://openjdk.org/jeps/439) promises:
 - Lower risks of allocations stalls,
 - Lower required heap memory overhead, and
@@ -214,26 +201,18 @@ For completeness, I am listing here the rest of the finalized features that are 
 <p class="tip">Generational ZGC is not yet the default, but that is the goal of a future release. If you would like to enable it, use the following command-line option: <b>java -XX:+UseZGC -XX:+ZGenerational</b></p>
 
 ### Key Encapsulation Mechanism API
->Introduce an API for key encapsulation mechanisms (KEMs), an encryption technique for securing symmetric keys using public key cryptography.
-
 If you are developing security libraries or tools, or you are curious about [Post-Quantum Cryptography](https://en.wikipedia.org/wiki/Post-quantum_cryptography), read more [here](https://openjdk.org/jeps/452).
 
 ### Prepare to Disallow the Dynamic Loading of Agents
->Issue warnings when agents are loaded dynamically into a running JVM. These warnings aim to prepare users for a future release which disallows the dynamic loading of agents by default in order to improve integrity by default. Serviceability tools that load agents at startup will not cause warnings to be issued in any release.
-
 If you are using dynamically loaded agents, read more [here](https://openjdk.org/jeps/451).
 
 ### Deprecate the Windows 32-bit x86 Port for Removal
->Deprecate the Windows 32-bit x86 port, with the intent to remove it in a future release.
-
 Java keeps evolving. Read more [here](https://openjdk.org/jeps/449).
 
 ## Notable Features Since Java 17 (LTS)
 If you are upgrading from Java 17, keep reading for the most relevant changes, or have a look [here](https://openjdk.org/projects/jdk/21/jeps-since-jdk-17).
 
 ### Simple Web Server
->Provide a command-line tool to start a minimal web server that serves static files only. No CGI or servlet-like functionality is available. This tool will be useful for prototyping, ad-hoc coding, and testing purposes, particularly in educational contexts.
-
 All you need to do is run `jwebserver`. Use `--help` for usage instructions.
 ```bash
 $ jwebserver
@@ -243,8 +222,6 @@ $ jwebserver
 ```
 
 ### Code Snippets in Java API Documentation
->Introduce an @snippet tag for JavaDoc's Standard Doclet, to simplify the inclusion of example source code in API documentation.
-
 Improve your documentation using `@snippet` as in the following example.
 ```java
 /**
@@ -258,13 +235,11 @@ Improve your documentation using `@snippet` as in the following example.
 ```
 
 ### UTF-8 by Default
->Specify UTF-8 as the default charset of the standard Java APIs. With this change, APIs that depend upon the default charset will behave consistently across all implementations, operating systems, locales, and configurations.
 - Make Java programs more predictable and portable when their code relies on the default charset.
 - Clarify where the standard Java API uses the default charset.
 - Standardize on UTF-8 throughout the standard Java APIs, except for console I/O.
 
 ### Deprecate Finalization for Removal
->Deprecate finalization for removal in a future release. Finalization remains enabled by default for now, but can be disabled to facilitate early testing. In a future release it will be disabled by default, and in a later release it will be removed. Maintainers of libraries and applications that rely upon finalization should consider migrating to other resource management techniques such as the try-with-resources statement and cleaners.
 - Help developers understand the dangers of finalization.
 - Prepare developers for the removal of finalization in a future version of Java.
 - Provide simple tooling to help detect reliance upon finalization.

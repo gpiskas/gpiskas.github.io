@@ -27,17 +27,6 @@ type: post
 ## Tech Stack
 Streamdog is built using [Tauri](https://tauri.app/) and [React](https://react.dev/). I was already familiar with React and looked for a way to leverage my existing knowledge for building a native app. At this point I considered Tauri and Electron, and decided to go with the former which is the newer and more lightweight option. Tauri has proven to be very easy to use and work with. The developer experience just feels great.
 
-### Tauri in a Nutshell
-> Tauri is an open-source framework for building lightweight, fast, and secure desktop applications using web technologies like **JavaScript, TypeScript, and HTML/CSS**. It aims to provide a simple and flexible way to create desktop apps with modern web development practices. Tauri utilizes existing web frameworks such as **React, Vue.js, or Angular**, allowing developers to leverage their existing skills. \
-\
-Applications are be packaged into standalone binaries for different platforms (such as Windows, macOS, and Linux) while maintaining a small footprint and fast startup times. Tauri achieves this by leveraging the **Rust** programming language for the backend, which provides performance and security benefits. But don't worry if you are not familiar with it, as you don't need to touch it too much.
-
-### React in a Nutshell
-> React probably needs no introduction. It has risen to prominence as one of the most popular JavaScript libraries for building user interfaces due to its simplicity, efficiency, and developer-friendly features. Its **component-based** architecture facilitates the creation of reusable UI components, and its efficient rendering mechanisms contribute to faster performance. \
-\
-React's declarative syntax and **JSX** enhance code readability and maintainability, further bolstering its appeal. Supported by a robust ecosystem of libraries and tools, React enables developers to build feature-rich applications with ease.
-
-
 ## Creating a Basic Tauri & React App Template
 Tauri has an excellent [Getting Started guide](https://tauri.app/v1/guides/getting-started/prerequisites/) which will explain everything you need to set up a basic project. Assuming you have installed the prerequisites listed in the guide, the easiest way to create a new Tauri app is through `npm`, which you will anyway need to build the UI.
 
