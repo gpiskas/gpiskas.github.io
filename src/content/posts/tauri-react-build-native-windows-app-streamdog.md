@@ -3,6 +3,7 @@ title: Using Tauri & React to Build a Native Windows App, Streamdog
 description: How I built Streamdog by leveraging my existing React knowledge for the frontend and using Tauri as a backend and native toolkit.
 author: Georgios Piskas
 pubDatetime: 2024-02-14T18:14:04.165Z
+modDatetime: 2024-06-05T17:32:07.784Z
 slug: tauri-react-build-native-windows-app-streamdog
 featured: false
 draft: false
@@ -16,7 +17,7 @@ tags:
 type: post
 ---
 
-[Streamdog](/projects/streamdog) is a native Windows app that will imitate your clicks and keystrokes in real time, bringing some life to your stream or recording. It is an ideal companion for those who don’t want to use a camera. In this blog post we'll explore the technologies used behind the scenes.
+[Streamdog](/projects/streamdog) is a native Windows app that will imitate your clicks and keystrokes in real time, bringing some life to your stream or recording. It is an ideal companion for those who don’t want to use a camera or would like to hide some part of their screen with a dynamic element. In this blog post we'll explore the technologies used behind the scenes.
 - [Streamdog Project page (download & features showcase)](/projects/streamdog)
 - [GitHub Repository](https://github.com/gpiskas/streamdog)
 
@@ -34,7 +35,7 @@ Tauri has an excellent [Getting Started guide](https://tauri.app/v1/guides/getti
 npm create tauri-app@latest
 ```
 
-This command will provide you with many choices for tools and frameworks, feel free to choose the ones you are the most comfortable with.
+This command will provide you with many choices for tools and frameworks, feel free to choose the ones you are the most comfortable with. In the example below a React-Tauri app is generated.
 
 ```sh
   Need to install the following packages:

@@ -3,15 +3,15 @@ title: What is New in Java 21 (LTS), with Practical Examples
 description: Discover all new features introduced in Java 21, including practical examples and code snippets for developers. Also includes notable features since Java 17.
 author: Georgios Piskas
 pubDatetime: 2024-02-17T15:24:56.631Z
-modDatetime: 2024-02-19T12:44:29.644Z
+modDatetime: 2024-06-05T17:29:08.590Z
 slug: what-is-new-java-21-lts-with-practical-examples
 featured: false
 draft: false
 tags:
-  - java
-  - features
-  - upgrade
-  - spring
+    - java
+    - features
+    - upgrade
+    - spring
 type: post
 ---
 
@@ -42,7 +42,7 @@ In this blog post, we will find out what is new in Java 21, the latest **Long-Te
 
 
 ## Finalized Features Breakdown
-We will be focusing on finalized features, especially those that have a more practical application for developers.
+We will be focusing on finalized features, especially those that have a more practical application and are targeted towards developers.
 
 
 ### Pattern Matching for switch
@@ -116,7 +116,7 @@ int recordPattern(Point point) {
 ```
 
 ### Virtual Threads
-Virtual threads preserve the familiar and easy to debug **thread-per-request** programming model, without being limited to the number of OS threads. The name virtual is due to the fact that they are not tied to a particular thread, in contrast to platform threads.
+Virtual threads preserve the familiar and easy to debug **thread-per-request** programming model, without being limited to the number of OS threads. The name virtual means that they are not tied to a particular OS thread, in contrast to platform threads.
 
 Code running on a virtual thread will occupy the OS thread only when necessary. This allows for other virtual threads to take over when it's blocked (`work-stealing`), resulting in scalability comparable to asynchronous or reactive style programming. This is completely transparent to developers while optimally using the available hardware capacity.
 
@@ -140,7 +140,7 @@ void run(List<Runnable> runnables) {
 
 
 ### Sequenced Collections
-In order to "fix" inconsistencies such as the ones below across Collection APIs regarding accessing elements in a well defined order, Sequenced Collections are introduced.
+In order to "fix" inconsistencies such as the ones below across Collection APIs regarding accessing elements in a well defined order, Sequenced Collections are introduced (new interfaces).
 ```java
                First element	                Last element
 List	       list.get(0)	                    list.get(list.size() - 1)
