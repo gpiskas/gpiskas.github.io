@@ -4,7 +4,7 @@ description: Enhancing token management in Spring Boot with Azure Entra ID (Azur
 author: Georgios Piskas
 pubDatetime: 2024-02-11T18:59:32.283Z
 slug: refresh-oauth2-tokens-spring-boot-spring-cloud-azure
-featured: true
+featured: false
 draft: false
 tags:
   - azure
