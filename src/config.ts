@@ -43,12 +43,6 @@ export const SOCIALS: SocialObjects = [
     active: true,
   },
   {
-    name: "Github",
-    href: "https://github.com/sponsors/gpiskas",
-    linkTitle: "Georgios Piskas on GitHub",
-    active: true,
-  },
-  {
     name: "Mail",
     href: "mailto:gpiskas@gmail.com",
     linkTitle: "Send an email to Georgios Piskas",
