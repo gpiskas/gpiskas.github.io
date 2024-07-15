@@ -17,7 +17,7 @@ type: post
  
 The [Microsoft Graph API](https://learn.microsoft.com/en-us/graph/use-the-api) provides a unified endpoint (https://graph.microsoft.com) for accessing all kinds of Microsoft services on Azure, Outlook, Teams, Office 365 and more. Through these APIs and the accompanying Java library developers can access and manage data across several platforms in a coherent fashion. 
 
-In order to use the MS Graph API, you need an app registration in Azure Entra ID that will have permissions for the required endpoints. After authenticating with OAuth 2.0, users (via delegated permissions) or the application itself (via application permissions) will be able to access the required set of features.
+In order to use the MS Graph API, you need an app registration in Microsoft Entra ID that will have permissions for the required endpoints. After authenticating with OAuth 2.0, users (via delegated permissions) or the application itself (via application permissions) will be able to access the required set of features.
 
 To get a taste of the MS Graph API you can use the [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer) which provides real samples and live interaction.
 

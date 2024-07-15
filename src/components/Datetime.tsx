@@ -48,22 +48,23 @@ const FormattedDatetime = ({ pubDatetime, modDatetime }: DatetimesProps) => {
 
   const date = myDatetime.toLocaleDateString('en-US', {
     year: "numeric",
-    month: "short",
+    month: "long",
     day: "numeric",
   });
 
-  const time = myDatetime.toLocaleTimeString('en-US', {
-    hour: "2-digit",
-    minute: "2-digit",
-    hour12: false
-  });
+  // Hide time time
+  // const time = myDatetime.toLocaleTimeString('en-US', {
+  //   hour: "2-digit",
+  //   minute: "2-digit",
+  //   hour12: false
+  // });
 
   return (
     <>
       <time dateTime={myDatetime.toISOString()}>{date}</time>
-      <span aria-hidden="true"> | </span>
+      {/* <span aria-hidden="true"> | </span>
       <span className="sr-only">&nbsp;at&nbsp;</span>
-      <span className="text-nowrap">{time}</span>
+      <span className="text-nowrap">{time}</span> */}
     </>
   );
 };
