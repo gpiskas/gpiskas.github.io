@@ -115,7 +115,7 @@ Last but not least, we can add a [client secret](https://gpiskas.com/posts/creat
 ```powershell
 az ad app credential reset `
  --id $appId `
- --display-name "client-secret"
+ --display-name "client-secret" `
  --years 2
 ```
 
@@ -180,7 +180,7 @@ az rest `
 # See https://learn.microsoft.com/en-us/cli/azure/ad/app/credential
 az ad app credential reset `
  --id $appId `
- --display-name "client-secret"
+ --display-name "client-secret" `
  --years 2
 ```
 
