@@ -1,6 +1,6 @@
 ---
 title: Automate the creation of an App Registration using Azure CLI
-description: Discover useful Azure CLI commands and Graph API endpoints to automate the creation of App Registrations and Enterprise APplications on Azure.
+description: Discover useful Azure CLI commands and Graph API endpoints to automate the creation of App Registrations and Enterprise Applications on Azure.
 author: Georgios Piskas
 pubDatetime: 2024-07-14T17:00:03.284Z
 slug: automate-creation-app-registration-azure-cli
