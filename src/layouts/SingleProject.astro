@@ -5,6 +5,7 @@ import Footer from "@components/Footer.astro";
 import { slugifyStr } from "@utils/slugify";
 import { SITE } from "@config";
 import type { ProjectEntry } from "types";
+import Comments from "./Comments.astro";
 
 export interface Props {
   post: ProjectEntry;
@@ -61,6 +62,8 @@ const layoutProps = {
     <article id="article" role="article" class="prose max-w-full mt-4">
       <Content />
     </article>
+
+    <Comments/>
 
     <div
       class="flex flex-col-reverse items-center justify-between gap-6 sm:flex-row-reverse sm:items-end sm:gap-4"

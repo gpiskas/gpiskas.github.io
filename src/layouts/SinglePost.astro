@@ -7,6 +7,7 @@ import Datetime from "@components/Datetime";
 import { slugifyStr } from "@utils/slugify";
 import { SITE } from "@config";
 import type { PostEntry } from "types";
+import Comments from "./Comments.astro";
 
 export interface Props {
   post: PostEntry;
@@ -74,6 +75,8 @@ const layoutProps = {
     <ul class="my-8">
       {tags.map((tag: string) => <Tag tag={slugifyStr(tag)} />)}
     </ul>
+
+    <Comments/>
 
     <div
       class="flex flex-col-reverse items-center justify-between gap-6 sm:flex-row-reverse sm:items-end sm:gap-4"
