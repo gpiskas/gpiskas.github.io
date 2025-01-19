@@ -1,0 +1,32 @@
+---
+import Footer from "@components/Footer.astro";
+import Header from "@components/Header.astro";
+import { SITE } from "@config";
+import Layout from "@layouts/Layout.astro";
+import Main from "@layouts/Main.astro";
+---
+
+<Layout title={`${SITE.title} | Terms of Use`} noindex>
+  <Header />
+  <Main pageTitle="Terms of Use">
+    <section class="prose max-w-full"></section>
+    <p>
+      ANY SOFTWARE, APPS, POSTS, PRODUCTS OR SERVICES - COLLECTIVELY HEREBY
+      REFERRED TO AS "ARTIFACTS" - CREATED AND PUBLISHED BY GEORGIOS PISKAS -
+      HEREBY REFERRED TO AS "AUTHOR" - ARE PROVIDED "AS IS", WITHOUT WARRANTY OF
+      ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+      OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+      IN NO EVENT SHALL THE AUTHOR OR COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM,
+      DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+      OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE ARTIFACTS OR THE
+      USE OR OTHER DEALINGS IN THE ARTIFACTS.
+    </p>
+  </Main>
+</Layout>
+<Footer />
+
+<style>
+  .post-title {
+    @apply text-xl font-semibold;
+  }
+</style>
