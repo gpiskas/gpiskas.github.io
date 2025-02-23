@@ -3,6 +3,7 @@ title: How to use the Microsoft Graph API Java SDK (v6)
 description: Learn how to interact with the Microsoft Graph API using Java and the latest MS Graph SDK, with practical examples.
 author: Georgios Piskas
 pubDatetime: 2024-06-15T08:34:31.844Z
+modDatetime: 2025-02-23T18:41:04.539Z
 slug: how-to-microsoft-graph-api-java-sdk-v6
 featured: false
 draft: false
@@ -32,11 +33,13 @@ First, we need to include the following maven dependency. Note that this guide i
 <dependency>
     <groupId>com.microsoft.graph</groupId>
     <artifactId>microsoft-graph</artifactId>
-    <version>6.13.0</version> <!-- Use the latest available -->
+    <version>6.29.0</version> <!-- Use the latest available -->
 </dependency>
 ```
 
 Then, we need to create an instance of `GraphServiceClient`. Creating it as a Bean in Spring comes handy to autowire it and reuse where necessary, but this can also be done in any other Java framework or vanilla runtime.
+
+If [Continuous Access Evaluation (CAE)](https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-continuous-access-evaluation) is causing issues related to token expiration or usage, the following example also shows how disable it so that tokens follow the default lifecycle (one hour validity).
 
 ```java
 import org.springframework.context.annotation.Bean;
@@ -59,7 +62,12 @@ public class GraphConfiguration {
                 .clientId(properties.getCredential().getClientId())
                 .clientSecret(properties.getCredential().getClientSecret())
                 .build();
+
+        // TODO readers, edit the following section:
+        // If you need to disable Continuous Access Evaluation (CAE), then initialize the auth provider manually. Otherwise use the provided constructors.
         return new GraphServiceClient(credential, SCOPE);
+        // AuthenticationProvider authenticationProvider = new AzureIdentityAuthenticationProvider(credential, new String[]{}, null, false, SCOPE);
+        // return new GraphServiceClient(authenticationProvider);
     }
 }
 ```
