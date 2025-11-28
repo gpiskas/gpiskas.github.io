@@ -4,7 +4,7 @@ description: Discover all new features introduced in Java 25, including practica
 author: Georgios Piskas
 pubDatetime: 2025-11-27T19:32:03.853Z
 slug: what-is-new-java-25-lts-with-practical-examples
-featured: false
+featured: true
 draft: false
 tags:
     - java

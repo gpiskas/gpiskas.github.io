@@ -4,7 +4,7 @@ description: Upgrade your skills with this Java 8 to Java 21 breakdown. Discover
 author: Georgios Piskas
 pubDatetime: 2024-02-24T10:01:08.819Z
 slug: java-8-to-java-21-new-language-features-highlights
-featured: true
+featured: false
 draft: false
 tags:
   - java
