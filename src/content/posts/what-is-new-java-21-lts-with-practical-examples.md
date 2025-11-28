@@ -15,7 +15,7 @@ tags:
 type: post
 ---
 
-In this blog post, we will find out what is new in Java 21, the latest **Long-Term Support (LTS)** version, which reached **General Availability (GA) on 19.09.2023**, but also what has been released since Java 17. Special focus is given to developer-oriented features.
+In this blog post, we will find out what is new in Java 21 which is a **Long-Term Support (LTS)** version that reached **General Availability (GA) on 19.09.2023**, but also what has been released since Java 17. Special focus is given to developer-oriented features.
 
 ## Table of Contents
 
