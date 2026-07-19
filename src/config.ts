@@ -13,30 +13,6 @@ export const SITE: Site = {
 
 export const SOCIALS: SocialObjects = [
   {
-    name: "Stripe",
-    href: "https://buy.stripe.com/28obMAdue2or07udQR",
-    linkTitle: "Support Georgios Piskas via Stripe (monthly subscription)",
-    active: true,
-  },
-  {
-    name: "Coin",
-    href: "https://donate.stripe.com/9AQcQE61M6EHcUg9AA",
-    linkTitle: "Support Georgios Piskas via Stripe (one-time donation)",
-    active: true,
-  },
-  {
-    name: "PayPal",
-    href: "https://paypal.me/gpiskas",
-    linkTitle: "Support Georgios Piskas via PayPal (one-time donation)",
-    active: true,
-  },
-  {
-    name: "Coffee",
-    href: "https://ko-fi.com/gpiskas",
-    linkTitle: "Support Georgios Piskas via Ko-Fi",
-    active: true,
-  },
-  {
     name: "LinkedIn",
     href: "https://www.linkedin.com/in/gpiskas",
     linkTitle: "Georgios Piskas on LinkedIn",
