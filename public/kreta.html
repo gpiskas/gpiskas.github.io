@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+    <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet">
+    <title>Nadine & Vasilis</title>
+    <style>
+      :root {
+        --bg: #f5f0ea;
+        --panel: #ffffff;
+        --ink: #1f2937;
+        --muted: #6b7280;
+        --line: #e5e7eb;
+        --gold: #c7932c;
+        --gold-soft: #f8efdb;
+        --sea: #0f766e;
+        --sea-soft: #deefee;
+        --rose: #f9d7d8;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(180deg, #faf6f3 0%, #f1eee9 100%);
+        color: var(--ink);
+      }
+
+      .page {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 32px 20px 80px;
+      }
+
+      .topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 24px;
+        padding: 8px 0;
+      }
+
+      .brand {
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .badge {
+        display: inline-block;
+        background: var(--gold-soft);
+        color: #7a5309;
+        border: 1px solid #ead7a0;
+        padding: 8px 12px;
+        border-radius: 999px;
+        font-size: 0.76rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1.4fr 0.8fr;
+        gap: 24px;
+        background: linear-gradient(135deg, #fffdfb 0%, #f7efe8 100%);
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        padding: 30px;
+        box-shadow: 0 12px 30px rgba(17, 24, 39, 0.04);
+      }
+
+      .eyebrow {
+        display: inline-block;
+        background: var(--sea-soft);
+        color: var(--sea);
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        padding: 8px 12px;
+        border-radius: 999px;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+      }
+
+      h1 {
+        margin: 0 0 12px;
+        font-size: clamp(2.4rem, 5vw, 4rem);
+        line-height: 1.05;
+      }
+
+      .subtitle {
+        margin: 0 0 24px;
+        max-width: 580px;
+        font-size: 1.08rem;
+        line-height: 1.6;
+        color: var(--muted);
+      }
+
+      .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      .meta-item {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 12px 16px;
+        min-width: 150px;
+      }
+
+      .meta-label {
+        display: block;
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--muted);
+        margin-bottom: 6px;
+      }
+
+      .meta-value {
+        font-weight: 700;
+        font-size: 1rem;
+      }
+
+      .placeholder-panel {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 300px;
+      }
+
+      .placeholder-box {
+        width: 100%;
+        height: 100%;
+        min-height: 240px;
+        border-radius: 20px;
+        border: 2px dashed #d1d5db;
+        background: linear-gradient(135deg, #f8fafc 0%, #f3f4f6 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--muted);
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        margin-top: 28px;
+      }
+
+      .card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        padding: 24px;
+      }
+
+      .card h2 {
+        margin-top: 0;
+        margin-bottom: 18px;
+        font-size: 1.4rem;
+      }
+
+      .details-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 14px;
+      }
+
+      .details-list li {
+        border-left: 3px solid var(--gold);
+        padding: 0 0 0 14px;
+        line-height: 1.6;
+        color: var(--ink);
+      }
+
+      .details-list strong {
+        color: var(--ink);
+      }
+
+      .itinerary {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 16px;
+      }
+
+      .itinerary li {
+        border-left: 3px solid var(--gold);
+        padding-left: 14px;
+      }
+
+      .day {
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 6px;
+      }
+
+      .plan {
+        font-weight: 700;
+        margin-bottom: 4px;
+      }
+
+      .map-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: var(--sea-soft);
+        border: 1px solid #bfdedb;
+        color: var(--sea);
+        text-decoration: none;
+        font-weight: 700;
+        transition: background 0.2s ease, transform 0.2s ease;
+      }
+
+      .map-link:hover {
+        background: #dff2ef;
+        transform: translateY(-1px);
+      }
+
+      .map-link::before {
+        content: "📍";
+        font-size: 0.85em;
+      }
+
+      .plan-note {
+        color: var(--muted);
+        line-height: 1.55;
+      }
+
+      @media (max-width: 840px) {
+        .hero,
+        .content {
+          grid-template-columns: 1fr;
+        }
+
+        .meta {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header class="topbar">
+        <div class="brand">emergency post-wedding relief pack</div>
+        <div class="badge">Nadine &amp; Vasilis</div>
+      </header>
+
+      <section class="hero">
+        <div>
+          <div class="eyebrow">A new chapter begins</div>
+          <h1>Welcome to Crete...</h1>
+          <p class="subtitle">
+            where the beach is warm, the sunsets are cinematic, and the itinerary is optional. Bring your passports,
+            sunscreen, towel, and zero expectations, because the best plans are the ones that start with
+            “we were just going to the beach” and end with a full-day detour.
+          </p>
+          <div class="meta">
+            <div class="meta-item">
+              <span class="meta-label">When</span>
+              <span class="meta-value">15.9 - 21.9</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Arrival</span>
+              <span class="meta-value">Heraklion</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Departure</span>
+              <span class="meta-value">Chania</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="placeholder-panel">
+          <img src="./kreta.png" alt="Kreta, Greece" style="width: 100%; height: 100%; min-height: 240px; object-fit: cover; border-radius: 20px; display: block;" />
+        </div>
+      </section>
+
+      <section class="content">
+        <div class="card">
+          <h2>Flights & transport</h2>
+          <ul class="itinerary">
+            <li>
+              <div class="day">Arrival</div>
+              <div class="plan">Flight 15.9, 23:50 VOL - 01:20 HER (overnight)</div>
+              <div class="plan-note">Booking reference 7CRM14</div>
+            </li>
+            <li>
+              <div class="day">Car</div>
+              <div class="plan"><a class="map-link" href="https://www.google.com/maps/search/Autokreta+Heraklion+airport" target="_blank" rel="noreferrer">Autokreta pickup</a> Pickup HER airport 01:45, dropoff at CHQ airport until 20:00</div>
+              <div class="plan-note">Fiat Panda Hybrid 2025 (classic Kreta experience) - Bring cash!</div>
+            </li>
+            <li>
+              <div class="day">Departure</div>
+              <div class="plan">Flight 21.9, 20:45 CHQ - 22:45 ZRH</div>
+              <div class="plan-note">Booking reference ZCWKHE</div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>Accommodation</h2>
+          <ul class="itinerary">
+            <li>
+              <div class="day">Heraklion</div>
+              <div class="plan"><a class="map-link" href="https://www.google.com/maps/place/Petousis+Hotel+%26+Suites/@35.3354008,25.0656242,17z/data=!4m9!3m8!1s0x149a57efd295d877:0x6c5b69363b11eb7f!5m2!4m1!1i2!8m2!3d35.3354008!4d25.0682045!16s%2Fg%2F11flvsd27b?entry=ttu&g_ep=EgoyMDI2MDgxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noreferrer">Petousis Hotel &amp; Suites</a> Superior Room incl. breakfast</div>
+              <div class="plan-note">Check in 15.9, check out 17.9. Informed that you will arrive 2–3 AM on 16.9 (straight to bed!).</div>
+            </li>
+            <li>
+              <div class="day">Chania</div>
+              <div class="plan"><a class="map-link" href="https://www.google.com/maps/place/Elia+Kalamaki/@35.5111049,23.9668322,17z/data=!3m1!4b1!4m9!3m8!1s0x149c7d15da64a605:0x4650445517605a94!5m2!4m1!1i2!8m2!3d35.5111049!4d23.9694125!16s%2Fg%2F11ffg6mz64?entry=ttu&g_ep=EgoyMDI2MDgxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noreferrer">Elia Kalamaki Hotel</a> Classic Room with Balcony incl. breakfast</div>
+              <div class="plan-note">Check in 17.9, check out 21.9.</div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card" style="margin-top: 24px;">
+        <h2>Optional itinerary</h2>
+        <ul class="itinerary">
+          <li>
+            <div class="day">Day 1 (15.9)</div>
+            <div class="plan">Arrival, sleep, Heraklion + Matala beach</div>
+            <div class="plan-note">Arrive early morning, rest at hotel, explore Heraklion and the famous Matala beach with its scenic cliffs.</div>
+          </li>
+          <li>
+            <div class="day">Day 2 (16.9)</div>
+            <div class="plan">Rethymno + Spilies beach, arrival Chania</div>
+            <div class="plan-note">Drive to Rethymno, visit Spilies beach, then continue to Chania for the night.</div>
+          </li>
+          <li>
+            <div class="day">Day 3 (17.9)</div>
+            <div class="plan">Balos beach</div>
+            <div class="plan-note">Full day boat trip to stunning Balos beach (possibly off-road too).</div>
+          </li>
+          <li>
+            <div class="day">Day 4 (18.9)</div>
+            <div class="plan">Elafonissi + Kedrodasos beaches</div>
+            <div class="plan-note">Visit the popular pink-sand Elafonissi beach and the pristine Kedrodasos beach nearby.</div>
+          </li>
+          <li>
+            <div class="day">Day 5 (19.9)</div>
+            <div class="plan">Falassarna beach</div>
+            <div class="plan-note">Explore Falassarna beach (can get windy). Scenic western coast experience.</div>
+          </li>
+          <li>
+            <div class="day">Day 6 (20.9)</div>
+            <div class="plan">Seitan Limani beach or nearby exploration</div>
+            <div class="plan-note">Relax at Seitan Limani or explore other nearby coastal treasures before departure.</div>
+          </li>
+          <li>
+            <div class="day">Day 7 (21.9)</div>
+            <div class="plan">Departure</div>
+            <div class="plan-note">Enjoy the day somewhere nearby until it's time to return the car and fly back.</div>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </body>
+</html>
